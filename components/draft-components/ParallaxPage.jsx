@@ -238,7 +238,7 @@ export default function ParallaxPage() {
 
         {/* Footer */}
         <footer className="footer h-screen flex flex-col items-center justify-center bg-gray-300 relative">
-          <a href="http://www.duda.ie/" target="_blank" className="footer__link text-[5vw] text-[#242423]">ATHAR</a>
+          <a href="#" target="_blank" className="footer__link text-[5vw] text-[#242423]">ATHAR</a>
           <a href="#slide-0" className="footer__link-top absolute left-1/2 bottom-[24] transform -translate-x-1/2 w-[100px] h-[100px] bg-[#242423] text-white flex items-center justify-center">Top
             <span className="footer__link-top-line absolute top-[-50px] left-1/2 w-[1px] h-[50px] bg-[#242423]" />
           </a>
