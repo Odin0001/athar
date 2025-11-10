@@ -47,8 +47,12 @@ const LockIcon = ({ className }) => (
 
 const ContactForm = () => {
   const [signinForm, setSigninForm] = useState({
+    name: "",
     email: "",
-    password: "",
+    companu: "",
+    position: "",
+    subject: "",
+    message: ""
   });
 
   const [typedText, setTypedText] = useState("");
@@ -180,7 +184,7 @@ const ContactForm = () => {
                   type="text"
                   placeholder="Full Name"
                   name="name"
-                  value={signinForm.email}
+                  value={signinForm.name}
                   onChange={handleChange}
                   className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
@@ -201,6 +205,34 @@ const ContactForm = () => {
                 <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
               </div>
 
+              {/* Company Input */}
+              <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
+                <input
+                  required
+                  type="text"
+                  placeholder="Company Name"
+                  name="company"
+                  value={signinForm.company}
+                  onChange={handleChange}
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                />
+                <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
+              </div>
+
+              {/* Position Input */}
+              <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
+                <input
+                  required
+                  type="text"
+                  placeholder="Position"
+                  name="position"
+                  value={signinForm.position}
+                  onChange={handleChange}
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                />
+                <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
+              </div>
+
               {/* subject Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
@@ -208,7 +240,7 @@ const ContactForm = () => {
                   type="text"
                   placeholder="Subject"
                   name="subject"
-                  value={signinForm.email}
+                  value={signinForm.subject}
                   onChange={handleChange}
                   className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
@@ -222,7 +254,7 @@ const ContactForm = () => {
                   placeholder="Your Message"
                   name="message"
                   rows={4}
-                  value={signinForm.password}
+                  value={signinForm.message}
                   onChange={handleChange}
                   className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300 resize-none"
                 ></textarea>
