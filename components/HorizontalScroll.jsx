@@ -18,38 +18,41 @@ export default function HorizontalScroll() {
 
   const panels = [
     { 
-      title: t('home.secondSection.firstList.title'), 
-      firstSentence: t('home.secondSection.firstList.firstSentence'),
-      secondSentence: t('home.secondSection.firstList.secondSentence'),
-      thirdSentence: t('home.secondSection.firstList.thirdSentence'),
-      fourthSentence: t('home.secondSection.firstList.fourthSentence'),
+      title: t('ourApproach.firstSection.title'),
+      subTitle1: t('ourApproach.firstSection.subTitle1'),
+      firstSentence: t('ourApproach.firstSection.firstSentence'),
+      subTitle2: t('ourApproach.firstSection.subTitle2'),
+      secondSentence: t('ourApproach.firstSection.secondSentence'),
+      subTitle3: t('ourApproach.firstSection.subTitle3'),
+      thirdSentence: t('ourApproach.firstSection.thirdSentence'),
+      subTitle4: t('ourApproach.firstSection.subTitle4'),
+      fourthSentence: t('ourApproach.firstSection.fourthSentence'),
       img: dummy 
     },
     { 
-      title: t('home.secondSection.secondList.title'), 
-      firstSentence: t('home.secondSection.secondList.firstSentence'),
-      secondSentence: t('home.secondSection.secondList.secondSentence'),
-      thirdSentence: t('home.secondSection.secondList.thirdSentence'),
-      fourthSentence: t('home.secondSection.secondList.fourthSentence'),
-      fifthSentence: t('home.secondSection.secondList.fifthSentence'),
+      title: t('ourApproach.secondSection.title'),
+      subTitle1: t('ourApproach.secondSection.subTitle1'),
+      firstSentence: t('ourApproach.secondSection.firstSentence'),
+      subTitle2: t('ourApproach.secondSection.subTitle2'),
+      secondSentence: t('ourApproach.secondSection.secondSentence'),
+      subTitle3: t('ourApproach.secondSection.subTitle3'),
+      thirdSentence: t('ourApproach.secondSection.thirdSentence'),
+      subTitle4: t('ourApproach.secondSection.subTitle4'),
+      fourthSentence: t('ourApproach.secondSection.fourthSentence'),
       img: dummy 
     },
     { 
-      title: t('home.secondSection.thirdList.title'), 
-      firstSentence: t('home.secondSection.thirdList.firstSentence'),
-      secondSentence: t('home.secondSection.thirdList.secondSentence'),
-      thirdSentence: t('home.secondSection.thirdList.thirdSentence'),
-      fourthSentence: t('home.secondSection.thirdList.fourthSentence'),
+      title: t('ourApproach.thirdSection.title'),
+      subTitle1: t('ourApproach.thirdSection.subTitle1'),
+      firstSentence: t('ourApproach.thirdSection.firstSentence'),
+      subTitle2: t('ourApproach.thirdSection.subTitle2'),
+      secondSentence: t('ourApproach.thirdSection.secondSentence'),
+      subTitle3: t('ourApproach.thirdSection.subTitle3'),
+      thirdSentence: t('ourApproach.thirdSection.thirdSentence'),
+      subTitle4: t('ourApproach.thirdSection.subTitle4'),
+      fourthSentence: t('ourApproach.thirdSection.fourthSentence'),
       img: dummy 
-    },
-    { 
-      title: t('home.secondSection.fourthList.title'), 
-      firstSentence: t('home.secondSection.fourthList.firstSentence'),
-      secondSentence: t('home.secondSection.fourthList.secondSentence'),
-      thirdSentence: t('home.secondSection.fourthList.thirdSentence'),
-      fourthSentence: t('home.secondSection.fourthList.fourthSentence'),
-      img: dummy 
-    },
+    }
   ]
 
   useLayoutEffect(() => {
@@ -96,7 +99,7 @@ export default function HorizontalScroll() {
     >
       <div
         ref={panelsWrapperRef}
-        className="horizontal-scroll-inner flex flex-nowrap h-full w-max"
+        className="horizontal-scroll-inner flex flex-nowrap h-full max-w-7xl"
       >
         {panels.map((panel, index) => (
           <section
@@ -113,38 +116,52 @@ export default function HorizontalScroll() {
               className="object-cover absolute -z-10 will-change-transform"
             />
             <div className="bg-black/40 backdrop-blur-sm p-8 rounded-lg max-w-5xl">
-              <h2 className="lg:text-9xl text-4xl text-center font-bold mb-4">{panel.title}</h2>
-              <ul className="grid grid-cols-1 gap-2 items-center text-xl">
-                {panel.firstSentence && <li className="flex justify-between items-center py-2 px-4 lg:text-md text-sm rounded-full bg-black border border-gray-200">
-                  {panel.firstSentence} 
-                  <Link href='/services'>
-                    <LuSquareArrowOutUpRight size={20} />
-                  </Link>
-                </li>}
-                {panel.secondSentence && <li className="flex justify-between items-center py-2 px-4 lg:text-md text-sm rounded-full bg-black border border-gray-200">
-                  {panel.secondSentence} 
-                  <Link href='/services'>
-                    <LuSquareArrowOutUpRight size={20} />
-                  </Link>
-                </li>}
-                {panel.thirdSentence && <li className="flex justify-between items-center py-2 px-4 lg:text-md text-sm rounded-full bg-black border border-gray-200">
-                  {panel.thirdSentence} 
-                  <Link href='/services'>
-                    <LuSquareArrowOutUpRight size={20} />
-                  </Link>
-                </li>}
-                {panel.fourthSentence && <li className="flex justify-between items-center py-2 px-4 lg:text-md text-sm rounded-full bg-black border border-gray-200">
-                  {panel.fourthSentence} 
-                  <Link href='/services'>
-                    <LuSquareArrowOutUpRight size={20} />
-                  </Link>
-                </li>}
-                {panel.fifthSentence && <li className="flex justify-between items-center py-2 px-4 lg:text-md text-sm rounded-full bg-black border border-gray-200">
-                  {panel.fifthSentence} 
-                  <Link href='/services'>
-                    <LuSquareArrowOutUpRight size={20} />
-                  </Link>
-                </li>}
+              <h2 className="lg:text-6xl text-4xl text-center font-bold mb-4">{panel.title}</h2>
+              <ul className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-start text-xl">
+                {panel.firstSentence && (
+                  <div>
+                    <h3 className='mb-8'>{panel.subTitle1}</h3>
+                    <li className="flex justify-between items-center lg:text-md text-sm">
+                      {panel.firstSentence}
+                      {/* <Link href='/services'>
+                        <LuSquareArrowOutUpRight size={20} />
+                      </Link> */}
+                    </li>
+                  </div>
+                )}
+                {panel.secondSentence && (
+                  <div>
+                    <h3 className='mb-8'>{panel.subTitle2}</h3>
+                    <li className="flex justify-between items-center lg:text-md text-sm">
+                      {panel.secondSentence}
+                      {/* <Link href='/services'>
+                        <LuSquareArrowOutUpRight size={20} />
+                      </Link> */}
+                    </li>
+                  </div>
+                )}
+                {panel.thirdSentence && (
+                  <div>
+                    <h3 className='mb-8'>{panel.subTitle3}</h3>
+                    <li className="flex justify-between items-center lg:text-md text-sm">
+                      {panel.thirdSentence}
+                      {/* <Link href='/services'>
+                        <LuSquareArrowOutUpRight size={20} />
+                      </Link> */}
+                    </li>
+                  </div>
+                )}
+                {panel.fourthSentence && (
+                  <div>
+                    <h3 className='mb-8'>{panel.subTitle4}</h3>
+                    <li className="flex justify-between items-center lg:text-md text-sm">
+                      {panel.fourthSentence}
+                      {/* <Link href='/services'>
+                        <LuSquareArrowOutUpRight size={20} />
+                      </Link> */}
+                    </li>
+                  </div>
+                )}
               </ul>
 
             </div>

@@ -1,4 +1,5 @@
 import ParallaxPage from "@/components/draft-components/ParallaxPage"
+import HorizontalScroll from "@/components/HorizontalScroll"
 import Services from "@/components/Services"
 
 export const metadata = {
@@ -65,7 +66,7 @@ const page = () => {
   return (
     <>
       {/* <ParallaxPage /> */}
-      <Services />
+      <HorizontalScroll />
     </>
   )
 }

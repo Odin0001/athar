@@ -14,6 +14,7 @@ import SlideShow from "@/components/draft-components/SlideShow"
 import SlidesWrapper from "@/components/draft-components/SlidesWrapper"
 import VerticalSections from "@/components/draft-components/VerticalSections"
 import VideoScroll from "@/components/draft-components/VideoScroll"
+import Services from "@/components/Services"
 
 export const metadata = {
   title: "Services — Athar",
@@ -85,7 +86,8 @@ const page = () => {
     <div>
       {/* <PinnedBackgroundZoom /> */}
       {/* <SlidesWrapper /> dont mix this with name rotator */}
-      <ParallaxSlides /> {/*dont mix this with name rotator */}
+      {/* <ParallaxSlides /> dont mix this with name rotator */}
+      <Services />
       {/* <KeyholeSection /> */}
       {/* <NameRotator /> */}
       {/* <PinnedHeadings /> */}
