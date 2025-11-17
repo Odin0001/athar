@@ -8,8 +8,9 @@ import ImageGrid from "@/components/draft-components/ImageGrid";
 import Header from "@/components/Header";
 import StackedSection from "@/components/StackedSection";
 import PinnedHeadings from "@/components/draft-components/PinnedHeadings";
+import Typewriter from "@/components/TypeWriting";
 import Expertise from "@/components/Expertise";
-import Typewriting from "@/components/TypeWriting";
+import MultiDimensionsSlider from "@/components/MultiDimensionsSlider";
 
 
 export const metadata = {
@@ -87,11 +88,13 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Typewriter />
       {/* <StackedSection /> */}
-      {/* <HorizontalScroll /> */}
-      <Typewriting />
       <Expertise />
-      <PinnedHeadings />
+      {/* <HorizontalScroll /> */}
+      {/* <PinnedHeadings /> */}
+      <MultiDimensionsSlider />
+      
       {/* <ColorsPalette /> */}
       
       {/* <Carousel /> */}

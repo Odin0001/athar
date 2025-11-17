@@ -12,7 +12,9 @@
     "headerSlogan": "Some slogan here",
     "firstSection": {
       "firstSentence": "AT athar we’re not just marketers — we’re a team of creative minds driven by passion to craft innovative solutions that help our clients leave their own ‘Athr’... a lasting impact that inspires and makes a difference.",
-      "secondSentence": "A specialized branding and digital growth agency in Abu Dhabi, dedicated to crafting marketing solutions rooted in strategic insight and creative excellence. We operate through a flexible, tailor-made business model designed to meet each client’s unique needs and drive lasting impact."
+      "secondSentence": "A specialized branding and digital growth agency in Abu Dhabi.",
+      "thirdSentence": "Dedicated to crafting marketing solutions rooted in strategic insight and creative excellence.",
+      "fourthSentence": "We operate through a flexible, tailor-made business model designed to meet each client’s unique needs and drive lasting impact."
     },
     "secondSection": {
       "firstList": {

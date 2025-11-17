@@ -1,4 +1,3 @@
-// components/Expertise.jsx
 "use client";
 
 import React, { useRef } from 'react';
@@ -6,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useTranslation } from '@/components/LanguageProvider'
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,13 +20,23 @@ const Expertise = () => {
 
   const slidesData = [
     {
+      number: '',
+      title: 'Our Services',
+      firstSentence: '',
+      secondSentence: '',
+      thirdSentence: '',
+      fourthSentence: '',
+      image: '',
+      bgColor: 'bg-orange-600',
+    },
+    {
       number: '01',
       title: t('home.secondSection.firstList.title'),
       firstSentence: t('home.secondSection.firstList.firstSentence'),
       secondSentence: t('home.secondSection.firstList.secondSentence'),
       thirdSentence: t('home.secondSection.firstList.thirdSentence'),
       fourthSentence: t('home.secondSection.firstList.fourthSentence'),
-      image: 'dummy.jpg',
+      image: '/dummy.jpg',
       bgColor: 'bg-emerald-600',
     },
     {
@@ -37,7 +47,7 @@ const Expertise = () => {
       thirdSentence: t('home.secondSection.secondList.thirdSentence'),
       fourthSentence: t('home.secondSection.secondList.fourthSentence'),
       fifthSentence: t('home.secondSection.secondList.fifthSentence'),
-      image: 'dummy2.jpg',
+      image: '/dummy2.jpg',
       bgColor: 'bg-indigo-600',
     },
     {
@@ -47,7 +57,7 @@ const Expertise = () => {
       secondSentence: t('home.secondSection.thirdList.secondSentence'),
       thirdSentence: t('home.secondSection.thirdList.thirdSentence'),
       fourthSentence: t('home.secondSection.thirdList.fourthSentence'),
-      image: 'dummy.jpg',
+      image: '/dummy.jpg',
       bgColor: 'bg-rose-600',
     },
     {
@@ -57,7 +67,7 @@ const Expertise = () => {
       secondSentence: t('home.secondSection.fourthList.secondSentence'),
       thirdSentence: t('home.secondSection.fourthList.thirdSentence'),
       fourthSentence: t('home.secondSection.fourthList.fourthSentence'),
-      image: 'dummy2.jpg',
+      image: '/dummy2.jpg',
       bgColor: 'bg-yellow-600',
     }
   ];
@@ -130,13 +140,16 @@ const Expertise = () => {
       }, 0); 
     });
 
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 5000)
   }, { scope: containerRef });
 
   return (
     <div ref={containerRef} className="relative w-full"> 
 
       <div className="relative w-full h-screen">
-        
+
         {slidesData.map((slide, index) => {
           // Initial position: stack the slides based on the titles above them
           const initialTop = index * PINNED_HEIGHT_PX;
@@ -155,8 +168,7 @@ const Expertise = () => {
             >
               <section 
                 // CRITICAL FIX: Add h-screen here to ensure full height initially
-                className={`slide-inner ${slide.bgColor} w-full **h-screen** mx-auto flex flex-col`}
-                style={{ height: '100vh' }} 
+                className={`slide-inner ${slide.bgColor} w-full h-screen mx-auto flex flex-col`} 
               >
                 
                 {/* Title and Number */}
@@ -184,11 +196,13 @@ const Expertise = () => {
                     </p>
                   </div>
                   <div className="w-1/2 flex items-center justify-center">
-                    <img
+                    {slide.image && <Image
                       src={slide.image}
                       alt={`Image for slide ${slide.number}`}
+                      width={400}
+                      height={400}
                       className="slide-image w-full max-h-full object-cover rounded-xl shadow-2xl opacity-100"
-                    />
+                    />}
                   </div>
                 </div>
               </section>
@@ -198,7 +212,7 @@ const Expertise = () => {
       </div>
 
       {/* A final section after the pinned slides */}
-      <div className="relative z-0 h-[100vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
+      <div className="relative z-0 h-[280vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
         Effect Complete!
       </div>
     </div>

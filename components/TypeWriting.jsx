@@ -10,7 +10,7 @@ import { useTranslation } from '@/components/LanguageProvider'
  * @param {number} delayBeforeDelete - Delay in milliseconds before starting to delete. (e.g., 1500)
  * @param {string} className - Optional Tailwind CSS class for styling the container.
  */
-const Typewriting = ({
+const Typewriter = ({
   words,
   typingSpeed = 100,
   deletingSpeed = 50,
@@ -18,7 +18,7 @@ const Typewriting = ({
   className = '',
 }) => {
   const { t } = useTranslation()
-  const wordList = words || [t('home.firstSection.secondSentence')]
+  const wordList = words || [t('home.firstSection.secondSentence'), t('home.firstSection.thirdSentence'), t('home.firstSection.fourthSentence'),]
   const [currentText, setCurrentText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -68,17 +68,19 @@ const Typewriting = ({
   }, [currentWord, currentText, isDeleting, wordIndex, typingSpeed, deletingSpeed, delayBeforeDelete, wordList.length]);
 
   return (
-    <div className={`text-3xl font-bold text-center py-4 px-4 italic inline-flex ${className}`}>
-      <span>{currentText}</span>
-      {/* Blinking Cursor */}
-      <span 
-        className={`
-          w-1 bg-blue-500 ml-1 inline-block
-          animate-blink transition-opacity duration-500
-        `}
-      >
-        &nbsp;
-      </span>
+    <div className={`lg:text-7xl text-3xl w-full h-[50vh] flex justify-center items-center font-extrabold text-center py-4 px-4 italic ${className}`}>
+      <div>
+        <span>{currentText}</span>
+        {/* Blinking Cursor */}
+        <span
+          className={`
+            w-1 bg-blue-500 ml-1 inline-block
+            animate-blink transition-opacity duration-500
+          `}
+        >
+          &nbsp;
+        </span>
+      </div>
       {/*
         Tailwind Utility for Cursor Blinking (Define this in your global CSS file if Tailwind doesn't support @keyframes directly in config):
 
@@ -94,4 +96,4 @@ const Typewriting = ({
   );
 };
 
-export default Typewriting;
+export default Typewriter;

@@ -1,4 +1,5 @@
 import ParallaxPage from "@/components/draft-components/ParallaxPage"
+import Services from "@/components/Services"
 
 export const metadata = {
   title: "Approach — Athar",
@@ -63,7 +64,8 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <ParallaxPage />
+      {/* <ParallaxPage /> */}
+      <Services />
     </>
   )
 }
