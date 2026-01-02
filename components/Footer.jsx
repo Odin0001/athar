@@ -1,3 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
+import logo from '@/public/logo.png';
+import { useTranslation } from '@/components/LanguageProvider'
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineYoutube } from "react-icons/ai";
 
 const generateBubbleStyle = (size, distance, position, time, delay) => ({
   '--size': `${size}rem`,
@@ -142,10 +148,11 @@ const bubbleData = [
 
 const Footer = () => {
   // We use a specific, non-variable blue color for the background
-  const footerBgColor = 'rgb(91, 73, 255)';
+  const { t, lang } = useTranslation()
+  const footerBgColor = '#005057';
 
   return (
-    <footer className="footer z-10 relative grid min-h-48" style={{ background: footerBgColor }}>
+    <footer className="footer z-10 relative grid min-h-48 w-full" style={{ background: footerBgColor, margin: 0, padding: 0 }}>
       {/* The 'bubbles' section must use vanilla CSS for the blob filter and complex animations. 
         We use a placeholder class name and a style attribute with the chosen color.
       */}
@@ -163,63 +170,68 @@ const Footer = () => {
       </div>
 
       {/* Footer Content: Uses Tailwind classes for layout and styling */}
-      <div className="content bg-blue-600 pt-24 pb-8 z-20" style={{ background: footerBgColor }}>
-        <div className="max-w-3xl mx-auto px-4 grid grid-cols-3 gap-6 text-white md:grid-cols-2 md:px-6 sm:grid-cols-1 sm:gap-14">
+      <div className="content bg-blue-600 pt-24 pb-8 z-20 w-full" style={{ background: footerBgColor, margin: 0 }}>
+        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 grid-cols-1 justify-items-center gap-6 text-white md:grid-cols-2 md:px-6 sm:grid-cols-1 sm:gap-14">
           
           {/* Label Section */}
-          <div className="footer__label">
-            <h2 className="text-4xl mb-1 sm:text-2xl">
-              **Name**
-            </h2>
+          <div className="footer__label flex flex-col items-center sm:block">
+            <Image src={logo} alt="Logo" width={200} className="mb-6" />
             <span className="text-sm sm:text-xs">
-              Description
+              {t('home.firstSection.secondSentence')}
             </span>
           </div>
 
           {/* Links Section */}
-          <ul className="footer__links flex flex-row space-x-8 justify-center sm:flex-col sm:space-x-0 sm:space-y-6">
+          <ul className="footer__links flex flex-col space-x-8 justify-center sm:space-x-0 sm:space-y-6 space-y-2">
             <li>
-              <a href="#" className="footer__link relative group">
-                Link1
-              </a>
+              <Link href="/about" className="footer__link relative group">
+                {t('nav.about')}
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link relative group">
-                Link2
-              </a>
+              <Link href="/services" className="footer__link relative group">
+                {t('nav.services')}
+              </Link>
             </li>
             <li>
-              <a href="#" className="footer__link relative group">
-                Link3
-              </a>
+              <Link href="/approach" className="footer__link relative group">
+                {t('nav.approach')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/why-athar" className="footer__link relative group">
+                {t('nav.why')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="footer__link relative group">
+                {t('nav.contact')}
+              </Link>
             </li>
           </ul>
 
           {/* Socials Section */}
-          <div className="footer__socials justify-self-end sm:justify-self-start">
-            <a href="#" className="footer__social text-xl mr-6 hover:opacity-80">
-              <i className="uil uil-github-alt"></i>
+          <div className="footer__socials justify-self-center sm:justify-self-start">
+            <a href="https://www.instagram.com/atharcreativeagency?igsh=dzl0dndvOTAwNWpj" className="footer__social text-xl mr-6 hover:opacity-80 flex items-center gap-2 mb-6">
+              <FaInstagram size={20} /> <span>Instagram</span>
             </a>
-            <a href="#" className="footer__social text-xl mr-6 hover:opacity-80">
-              <i className="fa-brands fa-codepen"></i>
+            <a href="https://www.linkedin.com/company/athar-creative" className="footer__social text-xl mr-6 hover:opacity-80 flex items-center gap-2 mb-6">
+              <FaLinkedinIn size={20} /> <span>Linkedin</span>
             </a>
-            <a href="#" className="footer__social text-xl mr-6 hover:opacity-80">
-              <i className="uil uil-instagram"></i>
-            </a>
-            <a href="#" className="footer__social text-xl hover:opacity-80">
-              <i className="uil uil-linkedin-alt"></i>
+            <a href="https://www.youtube.com/@AtharCreativeagency" className="footer__social text-xl mr-6 hover:opacity-80 flex items-center gap-2 mb-6">
+              <AiOutlineYoutube size={20} /> <span>Youtube</span>
             </a>
           </div>
         </div>
 
         {/* Copyright */}
         <p className="footer__copy text-center text-sm text-gray-300 pt-12 pb-8" style={{ background: footerBgColor }}>
-          © Copyright All rights reserved
+          ©{new Date().getFullYear()} Athar, All rights reserved.
         </p>
       </div>
 
       {/* SVG Filter: Must remain outside the component flow but inside the body for the filter to work */}
-      <svg style={{ position: 'fixed', top: '100vh' }}>
+      <svg style={{ position: 'fixed', top: '100vh', left: 0, width: 0, height: 0 }}>
         <defs>
           <filter id="blob">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>

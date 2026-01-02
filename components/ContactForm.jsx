@@ -1,9 +1,10 @@
 'use client'
 import { useState, useEffect } from "react";
-import { FaUserTie } from "react-icons/fa";
+import { FaUserTie, FaRegBuilding } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { FaPenFancy } from "react-icons/fa";
 import { LuMessageSquareMore } from "react-icons/lu";
+import { PiRankingLight } from "react-icons/pi";
 
 // --- SVGs for Icons (replacing v-icon) ---
 
@@ -49,7 +50,7 @@ const ContactForm = () => {
   const [signinForm, setSigninForm] = useState({
     name: "",
     email: "",
-    companu: "",
+    company: "",
     position: "",
     subject: "",
     message: ""
@@ -59,9 +60,9 @@ const ContactForm = () => {
 
   const phrases = [
     "Maximize your visibility with cutting-edge SEO and paid media.",
-    "Turning clicks into clients with conversion-optimized funnels.",
-    "Your digital presence, simplified. Seamless tech and strategy.",
-    "Performance marketing that drives qualified leads, not just traffic.",
+    // "Turning clicks into clients with conversion-optimized funnels.",
+    // "Your digital presence, simplified. Seamless tech and strategy.",
+    // "Performance marketing that drives qualified leads, not just traffic.",
   ];
 
   const handleSubmit = (e) => {
@@ -117,7 +118,7 @@ const ContactForm = () => {
   // Custom CSS for the gradient background and typing cursor
   const customStyles = `
         .main-gradient-bg {
-            background: linear-gradient(132deg, #0F1829, #360201, #0F292A, #3D3765, #2D1E23, #5c5c5c);
+            background: linear-gradient(132deg, #97b9fd, #1a314c, #005057, #00bf93, #e3ff00, #fc4949);
             background-size: 400% 400%;
             animation: BackgroundGradient 15s ease infinite;
         }
@@ -131,6 +132,12 @@ const ContactForm = () => {
             }
             100% {
                 background-position: 0% 50%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .main-gradient-bg {
+                animation: none;
             }
         }
 
@@ -156,22 +163,22 @@ const ContactForm = () => {
   return (
     <>
       <style>{customStyles}</style>
-      <main className="main-gradient-bg w-full h-screen flex justify-center items-center">
-        <div className="flex flex-col lg:flex-row justify-between w-full px-8 md:px-16 space-y-12 lg:space-y-0">
+      <main className="main-gradient-bg w-full min-h-screen py-12 overflow-auto flex items-start md:items-center justify-center">
+        <div className="flex flex-col-reverse lg:flex-row justify-between w-full px-4 sm:px-8 md:px-16 gap-y-8 lg:space-y-0">
           {/* Right Side - Marketing Message */}
-          <div className="w-full flex justify-center items-center lg:order-2">
+          <div className="w-full flex justify-center items-center lg:order-2 px-2 sm:px-4">
             <div className="text-white text-center p-4">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
                 ATHAR
               </h1>
-              <h2 className="text-xl md:text-4xl font-light text-gray-300 min-h-[5rem] overflow-hidden typed-text-container">
+              <h2 className="text-base sm:text-xl md:text-4xl font-light min-h-[4rem] md:min-h-[5rem] overflow-hidden typed-text-container">
                 {typedText}
               </h2>
             </div>
           </div>
 
           {/* Left Side - Login Form */}
-          <div className="relative bg-gray-900/50 backdrop-blur-xl border border-white/20 shadow-2xl shadow-black rounded-3xl w-full max-w-lg mx-auto p-8 text-white lg:order-1">
+          <div className="relative bg-gray-900/50 backdrop-blur-lg border border-white/20 shadow-2xl shadow-black rounded-3xl w-full max-w-lg mx-auto p-6 sm:p-8 text-white lg:order-1 mt-4 lg:mt-0">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <h3 className="text-2xl font-semibold mb-8">
                 Reach us out
@@ -181,84 +188,90 @@ const ContactForm = () => {
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
                   required
+                  aria-label="Full Name"
                   type="text"
                   placeholder="Full Name"
                   name="name"
                   value={signinForm.name}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
-                <FaUserTie className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
+                <FaUserTie className="text-gray-400 absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
               </div>
 
               {/* Email Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
                   required
+                  aria-label="Email Address"
                   type="email"
                   placeholder="Email Address"
                   name="email"
                   value={signinForm.email}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
-                <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
+                <MdOutlineMail className="text-gray-400 absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-6 sm:h-6" />
               </div>
 
               {/* Company Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
                   required
+                  aria-label="Company Name"
                   type="text"
                   placeholder="Company Name"
                   name="company"
                   value={signinForm.company}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
-                <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
+                <FaRegBuilding className="text-gray-400 absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-6 sm:h-6" />
               </div>
 
               {/* Position Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
                   required
+                  aria-label="Position"
                   type="text"
                   placeholder="Position"
                   name="position"
                   value={signinForm.position}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
-                <MdOutlineMail className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6" />
+                <PiRankingLight className="text-gray-400 absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-6 sm:h-6" />
               </div>
 
               {/* subject Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <input
                   required
+                  aria-label="Subject"
                   type="text"
                   placeholder="Subject"
                   name="subject"
                   value={signinForm.subject}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300"
                 />
-                <FaPenFancy className="text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5" />
+                <FaPenFancy className="text-gray-400 absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5" />
               </div>
 
               {/* message Input */}
               <div className="relative border border-gray-500 rounded-xl z-0 before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-[linear-gradient(to_top,#575757,transparent_80%)] before:opacity-0 focus-within:before:opacity-100 before:transition-opacity before:duration-300">
                 <textarea
                   required
+                  aria-label="Your Message"
                   placeholder="Your Message"
                   name="message"
                   rows={4}
                   value={signinForm.message}
                   onChange={handleChange}
-                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300 resize-none"
+                  className="placeholder-gray-400 text-white w-full py-3 px-4 pl-10 sm:pl-12 rounded-xl bg-white/10 outline-none focus:bg-transparent transition-colors duration-300 resize-none"
                 ></textarea>
-                <LuMessageSquareMore className="text-gray-400 absolute left-4 top-6 -translate-y-1/2 w-6 h-6" />
+                <LuMessageSquareMore className="text-gray-400 absolute left-3 sm:left-4 top-4 sm:top-6 -translate-y-1/2 w-4 h-4 sm:w-6 sm:h-6" />
               </div>
 
               <button

@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --color-prussian-blue: #1a314c;
+  --color-ice-blue: #97b9fd;
+  --color-neon-chartreuse: #e3ff00;
+  --color-dark-teal: #005057;
+  --color-mint-leaf: #00bf93;
+  --color-strawberry-red: #fc4949;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -112,9 +121,17 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
   body {
     @apply bg-background text-foreground;

@@ -1,12 +1,14 @@
 'use client'
-import dummy from '@/public/dummy.jpg'
+import service1 from '@/public/service1.png'
+import service2 from '@/public/service2.png'
+import service3 from '@/public/service3.png'
+import service4 from '@/public/service4.png'
 import Image from 'next/image'
 import { useTranslation } from '@/components/LanguageProvider'
-import { List } from 'lucide-react'
 
 const Services = () => {
   
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
 
   const data = [
     {
@@ -19,7 +21,7 @@ const Services = () => {
         t('services.firstSection.list.item3'),
         t('services.firstSection.list.item4'),
       ],
-      img: dummy
+      img: service1
     },
     {
       title: t('services.secondSection.title'),
@@ -31,7 +33,7 @@ const Services = () => {
         t('services.secondSection.list.item4'),
         t('services.secondSection.list.item5'),
       ],
-      img: dummy
+      img: service2
     },
     {
       title: t('services.thirdSection.title'),
@@ -42,11 +44,11 @@ const Services = () => {
         t('services.thirdSection.list.item3'),
         t('services.thirdSection.list.item4'),
       ],
-      img: dummy
+      img: service3
     },
     {
       title: t('services.fourthSection.title'),
-      description: t('services.fourthSection.firstSentence'),
+      description: t('services.fourthSection.firstSentence'), 
       list: [
         t('services.fourthSection.list.item1'),
         t('services.fourthSection.list.item2'),
@@ -54,26 +56,26 @@ const Services = () => {
         t('services.fourthSection.list.item4'),
         t('services.fourthSection.list.item5'),
       ],
-      img: dummy
+      img: service4
     },
   ]
   
   return (
-    <div className='w-full bg-black px-4 py-42'>
+    <div className='w-full bg-white px-4 py-42'>
       {data.map((item, index) => (
         <div key={index} className='w-full min-h-screen'>
-          <div className={`flex ${index % 2 != 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col justify-between gap-20 max-w-7xl mx-auto`}>
-            <Image src={item.img} width={500} alt={item.title} />
-            <div className='flex flex-col gap-8 flex-1'>
-              <h2 className='text-7xl font-bold text-white py-4 w-max relative'>
-                {item.title}
-                <hr className='absolute bottom-0 left-0 w-full bg-white text-white border border-white' />
-              </h2>
-              <p className='text-3xl font-semibold text-gray-200'>{item.description}</p>
-              {item.desc2 && <p className='text-xl font-medium text-gray-200'>{item.desc2}</p>}
+          <div className={`flex ${index % 2 != 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col justify-between gap-20 max-w-7xl mx-auto`} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+            <div className='relative flex-1 lg:my-0 my-32'>
+              <Image src={item.img} width={600} alt={item.title} className='h-max absolute top-1/2 left-1/2 -translate-1/2 object-cover' />
+              <h2 className={`lg:text-7xl md:text-5xl text-4xl inline-block w-[400px] text-center font-bold ${item.title === 'Brand Essence' ? "text-white" : "text-prussian-blue"} absolute top-1/2 left-1/2 -translate-1/2 z-20`}>{item.title}</h2>
+            </div>
+            <div className={`flex flex-col gap-8 flex-1 ${lang === 'ar' ? 'text-right' : 'text-left items-start'}`}>
+
+              <p className='lg:text-3xl text-lg font-semibold text-gray-800 text-justify'>{item.description}</p>
+              {item.desc2 && <p className='lg:text-xl text-md font-medium text-gray-800 text-justify'>{item.desc2}</p>}
               <ul>
                 {item.list.map((listItem, index) => (
-                  <li key={index} className='text-white mb-2'>
+                  <li key={index} className={`text-gray-800 mb-2 lg:text-xl text-md ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
                     {listItem}
                   </li>
                 ))}

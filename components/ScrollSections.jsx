@@ -5,9 +5,13 @@ import gsap from 'gsap';
 import { useTranslation } from '@/components/LanguageProvider'
 import { Observer } from 'gsap/Observer';
 import { usePathname } from 'next/navigation';
+import about1 from '@/public/about1.png'
+import about2 from '@/public/about2.png'
+import about3 from '@/public/about3.png'
+import Image from 'next/image';
 
 const ScrollSections = () => {
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
   const pathname = usePathname();
   const containerRef = useRef(null);
   const sectionRefs = useRef([]);
@@ -23,36 +27,48 @@ const ScrollSections = () => {
   const sectionData = [
   { 
     id: 0, 
-    text: (
-            <div className='flex flex-col items-center gap-4'>
-              <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.firstSection.title')}</h1>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.firstSection.firstSentence')}</p>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.firstSection.secondSentence')}</p>
-            </div>
-          ), 
-    url: "https://assets.codepen.io/16327/site-landscape-1.jpg" 
+    // text: (
+    //         <div className='flex flex-col items-start gap-4'>
+    //           <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.firstSection.title')}</h1>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.firstSection.firstSentence')}</p>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.firstSection.secondSentence')}</p>
+    //         </div>
+    //       ), 
+    title: t('about.firstSection.title'),
+    firstSentence: t('about.firstSection.firstSentence'),
+    secondSentence: t('about.firstSection.secondSentence'),
+    bg: "mint-leaf",
+    img: about1
   },
   { 
     id: 1, 
-    text: (
-            <div className='flex flex-col items-center gap-4'>
-              <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.secondSection.title')}</h1>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.secondSection.firstSentence')}</p>
-            </div>
-          ), 
-    url: "https://assets.codepen.io/16327/site-landscape-8.jpg" 
+    // text: (
+    //         <div className='flex flex-col items-start gap-4'>
+    //           <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.secondSection.title')}</h1>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.secondSection.firstSentence')}</p>
+    //         </div>
+    //       ), 
+    title: t('about.secondSection.title'),
+    firstSentence: t('about.secondSection.firstSentence'),
+    bg: "white",
+    img: about2
   },
   { 
     id: 2, 
-    text: (
-            <div className='flex flex-col items-center gap-4'>
-              <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.thirdSection.title')}</h1>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.firstSentence')}</p>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.secondSentence')}</p>
-              <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.thirdSentence')}</p>
-            </div>
-          ), 
-    url: "https://assets.codepen.io/16327/site-landscape-2.jpg" 
+    // text: (
+    //         <div className='flex flex-col items-start gap-4'>
+    //           <h1 className='text-4xl sm:text-6xl md:text-8xl lg:text-[10rem]'>{t('about.thirdSection.title')}</h1>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.firstSentence')}</p>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.secondSentence')}</p>
+    //           <p className='text-xl sm:text-2xl md:text-4xl'>{t('about.thirdSection.thirdSentence')}</p>
+    //         </div>
+    //       ), 
+    title: t('about.thirdSection.title'),
+    firstSentence: t('about.thirdSection.firstSentence'),
+    secondSentence: t('about.thirdSection.secondSentence'),
+    thirdSentence: t('about.thirdSection.thirdSentence'),
+    bg: "strawberry-red",
+    img: about3
   },
 
 ];
@@ -241,19 +257,26 @@ const ScrollSections = () => {
             <div ref={el => innerRefs.current[index] = el} className="inner w-full h-full overflow-hidden">
               <div
                 ref={el => imageRefs.current[index] = el}
-                className="bg absolute h-full w-full top-0 flex items-center justify-center"
-                style={{
-                  backgroundImage: `url(${data.url})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+                className={`bg-${data.bg} absolute h-full w-full top-0 flex items-center justify-center`}
+                // style={{
+                //   backgroundImage: `url(${data.url})`,
+                //   backgroundSize: 'cover',
+                //   backgroundPosition: 'center'
+                // }}
               >
                 <div className="bg-gradient-overlay"></div>
                 <div
                   ref={el => headingRefs.current[index] = el}
-                  className="section-heading text-white z-20 font-semibold text-center w-[90vw] max-w-6xl mr-[-0.5em] leading-none"
+                  className={`section-heading w-full h-full flex ${lang === 'ar' ? 'lg:flex-row-reverse text-right' : 'lg:flex-row'} flex-col lg:justify-between justify-center items-center gap-10 px-10 text-white z-20 font-semibold w-[90vw] leading-none`}
                 >
-                  {data.text}
+                  {/* {data.text} */}
+                    <div className='lg:max-w-1/2 leading-6'>
+                      <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-10'>{data.title}</h1>
+                      <p className='text-md sm:text-lg md:text-xl mb-6'>{data.firstSentence}</p>
+                      {data.secondSentence && <p className='text-md sm:text-lg md:text-xl mb-6'>{data.secondSentence}</p>}
+                      {data.thirdSentence && <p className='text-md sm:text-lg md:text-xl'>{data.thirdSentence}</p>}
+                    </div>
+                    <Image src={data.img} alt={`slide number ${index + 1}`} width={700} sizes='700px' className='max-w-[700px] lg:w-[700px] w-[400px]' />
                 </div>
               </div>
             </div>

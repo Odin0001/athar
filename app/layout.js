@@ -1,19 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Alexandria } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/utils/LenisProvider";
 import SplashCursor from "@/components/SplashCursor";
 import Navbar from "@/components/Navbar";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import ConditionalFooter from "@/components/ConditionalFooter";
+import FontController from "@/components/FontController";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const alexandria = Alexandria({
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata = {
@@ -78,11 +79,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} ${alexandria.className} antialiased`}
       >
         <SplashCursor />
         <LenisProvider>
           <LanguageProvider>
+            <FontController 
+              montserratClassName={montserrat.className}
+              alexandriaClassName={alexandria.className}
+            />
             <Navbar />
             {children}
             <ConditionalFooter />

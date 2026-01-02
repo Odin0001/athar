@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useTranslation } from '@/components/LanguageProvider'
+import movingText from '@/public/moving-text.jpg'
+import Image from 'next/image';
 
 /**
  * Typewriter Component
@@ -18,7 +20,7 @@ const Typewriter = ({
   className = '',
 }) => {
   const { t } = useTranslation()
-  const wordList = words || [t('home.firstSection.secondSentence'), t('home.firstSection.thirdSentence'), t('home.firstSection.fourthSentence'),]
+  const wordList = words || [t('home.firstSection.thirdSentence'), t('home.firstSection.fourthSentence'),]
   const [currentText, setCurrentText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -68,18 +70,12 @@ const Typewriter = ({
   }, [currentWord, currentText, isDeleting, wordIndex, typingSpeed, deletingSpeed, delayBeforeDelete, wordList.length]);
 
   return (
-    <div className={`lg:text-7xl text-3xl w-full h-[50vh] flex justify-center items-center font-extrabold text-center py-4 px-4 italic ${className}`}>
-      <div>
-        <span>{currentText}</span>
+    <div className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl w-full min-h-screen h-screen flex justify-center items-center font-extrabold text-center py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-12 italic ${className}`}>
+      <div className='w-full h-full relative'>
+        <Image src={movingText} alt='moving text' fill className='absolute -z-10 object-cover' />
+        <span className='text-gray-700 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] sm:w-4/5 md:w-3/4 px-2 sm:px-4'>{currentText}</span>
         {/* Blinking Cursor */}
-        <span
-          className={`
-            w-1 bg-blue-500 ml-1 inline-block
-            animate-blink transition-opacity duration-500
-          `}
-        >
-          &nbsp;
-        </span>
+        
       </div>
       {/*
         Tailwind Utility for Cursor Blinking (Define this in your global CSS file if Tailwind doesn't support @keyframes directly in config):

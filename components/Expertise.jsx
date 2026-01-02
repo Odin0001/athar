@@ -16,18 +16,19 @@ const PINNED_HEIGHT_PX = 100;
 
 const Expertise = () => {
   
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
 
   const slidesData = [
     {
       number: '',
-      title: 'Our Services',
+      title: t('home.secondSection.servicesTitle'),
       firstSentence: '',
       secondSentence: '',
       thirdSentence: '',
       fourthSentence: '',
       image: '',
-      bgColor: 'bg-orange-600',
+      bgImage: '',
+      bgColor: 'bg-ice-blue',
     },
     {
       number: '01',
@@ -36,8 +37,9 @@ const Expertise = () => {
       secondSentence: t('home.secondSection.firstList.secondSentence'),
       thirdSentence: t('home.secondSection.firstList.thirdSentence'),
       fourthSentence: t('home.secondSection.firstList.fourthSentence'),
-      image: '/dummy.jpg',
-      bgColor: 'bg-emerald-600',
+      image: '/direction.png',
+      bgImage: '/home-direction.png',
+      bgColor: 'bg-mint-leaf',
     },
     {
       number: '02',
@@ -47,8 +49,9 @@ const Expertise = () => {
       thirdSentence: t('home.secondSection.secondList.thirdSentence'),
       fourthSentence: t('home.secondSection.secondList.fourthSentence'),
       fifthSentence: t('home.secondSection.secondList.fifthSentence'),
-      image: '/dummy2.jpg',
-      bgColor: 'bg-indigo-600',
+      image: '/brand.png',
+      bgImage: '/home-brand.png',
+      bgColor: 'bg-white',
     },
     {
       number: '03',
@@ -57,8 +60,9 @@ const Expertise = () => {
       secondSentence: t('home.secondSection.thirdList.secondSentence'),
       thirdSentence: t('home.secondSection.thirdList.thirdSentence'),
       fourthSentence: t('home.secondSection.thirdList.fourthSentence'),
-      image: '/dummy.jpg',
-      bgColor: 'bg-rose-600',
+      image: '/digital.png',
+      bgImage: '/home-digital.png',
+      bgColor: 'bg-strawberry-red',
     },
     {
       number: '04',
@@ -67,8 +71,9 @@ const Expertise = () => {
       secondSentence: t('home.secondSection.fourthList.secondSentence'),
       thirdSentence: t('home.secondSection.fourthList.thirdSentence'),
       fourthSentence: t('home.secondSection.fourthList.fourthSentence'),
-      image: '/dummy2.jpg',
-      bgColor: 'bg-yellow-600',
+      image: '/crafted.png',
+      bgImage: '/home-brand.png',
+      bgColor: 'bg-dark-teal',
     }
   ];
 
@@ -79,8 +84,9 @@ const Expertise = () => {
     const slides = gsap.utils.toArray('.scroll-slide-wrapper');
 
     // 1. Calculate Total Scroll Distance:
-    // We need 100vh of scroll for each slide's animation to complete.
-    const scrollDuration = numSlides * window.innerHeight;
+    // We need 100vh for the first slide to be pinned at the top,
+    // then 100vh of scroll for each slide's animation to complete.
+    const scrollDuration = (numSlides + 1) * window.innerHeight;
 
     // 2. Pin the main component container for the entire effect duration
     ScrollTrigger.create({
@@ -102,7 +108,10 @@ const Expertise = () => {
       const slideImage = slideWrapper.querySelector('.slide-image');
 
       // The starting point for this slide's animation
-      const startPoint = i * window.innerHeight;
+      // For the first slide (i=0), we want it to start animating only after it's pinned at the top
+      // This means we need to wait until the scroll has progressed enough (1 viewport height) for the first slide to be pinned
+      // For subsequent slides, they start after their previous slides have completed
+      const startPoint = (i + 1) * window.innerHeight;
       
       // The final TOP position of the slide wrapper after its content is pinned
       const finalTopPosition = i * PINNED_HEIGHT_PX;
@@ -172,36 +181,56 @@ const Expertise = () => {
               >
                 
                 {/* Title and Number */}
-                <header className="flex items-center justify-between p-4 bg-transparent w-full h-[100px] flex-shrink-0 text-white">
-                  <h2 className="text-4xl sm:text-6xl font-extrabold flex items-center space-x-4">
+                <header className={`flex items-center ${lang === 'ar' ? 'justify-end' : 'justify-start'} p-4 bg-transparent w-full h-[100px] flex-shrink-0 ${slide.bgColor === 'bg-ice-blue' ? 'text-prussian-blue' : slide.number === '02' ? 'text-dark-teal' : 'text-white'}`}>
+                  <h2 className={`text-4xl sm:text-6xl font-extrabold flex items-center ${lang === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
                     <span className="text-2xl sm:text-3xl font-light opacity-80">{slide.number}</span>
-                    <span>{slide.title}</span>
+                    <div className='relative inline-block'>
+                      {slide.bgImage && (
+                        <div className={`absolute ${lang === 'ar' ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 w-[150px] h-[80px] z-10`}>
+                          <Image 
+                            src={slide.bgImage} 
+                            alt={`Background image for slide ${slide.number}`} 
+                            fill
+                            className="object-cover"
+                            sizes="200px"
+                          />
+                        </div>
+                      )}
+                      <span className='relative z-20'>{slide.title}</span>
+                    </div>
                   </h2>
                 </header>
 
                 {/* Description and Image */}
-                <div className="slide-content flex flex-grow p-4 mt-4 overflow-hidden text-white">
-                  <div className='description-text w-1/2 text-xl sm:text-2xl font-light leading-relaxed pr-8 opacity-100'>
-                    <p>
+                <div className={`slide-content flex ${lang === 'ar' ? 'lg:flex-row-reverse flex-col lg:items-start items-end' : 'lg:flex-row flex-col'} flex-grow p-4 mt-4 overflow-hidden ${slide.number === '02' ? 'text-dark-teal' : 'text-white'}`}>
+                  <ul 
+                    className={`description-text lg:w-1/2 w-full text-xl sm:text-3xl font-light leading-relaxed opacity-100 space-y-2 ${lang === 'ar' ? 'text-right pr-10' : 'text-left pl-10'}`} 
+                    style={{ 
+                      listStyleType: 'disc', 
+                      listStylePosition: 'outside',
+                      ...(lang === 'ar' && { direction: 'rtl' })
+                    }}
+                  >
+                    {slide.firstSentence && <li>
                       {slide.firstSentence}
-                    </p>
-                    <p>
+                    </li>}
+                    {slide.secondSentence && <li>
                       {slide.secondSentence}
-                    </p>
-                    <p>
+                    </li>}
+                    {slide.thirdSentence && <li>
                       {slide.thirdSentence}
-                    </p>
-                    <p>
+                    </li>}
+                    {slide.fourthSentence && <li>
                       {slide.fourthSentence}
-                    </p>
-                  </div>
-                  <div className="w-1/2 flex items-center justify-center">
+                    </li>}
+                  </ul>
+                  <div className="w-1/2 flex justify-center items-start">
                     {slide.image && <Image
                       src={slide.image}
                       alt={`Image for slide ${slide.number}`}
-                      width={400}
-                      height={400}
-                      className="slide-image w-full max-h-full object-cover rounded-xl shadow-2xl opacity-100"
+                      width={600}
+                      height={300}
+                      className="slide-image object-cover opacity-100"
                     />}
                   </div>
                 </div>
@@ -212,7 +241,7 @@ const Expertise = () => {
       </div>
 
       {/* A final section after the pinned slides */}
-      <div className="relative z-0 h-[280vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
+      <div className="relative z-0 h-[320vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
         Effect Complete!
       </div>
     </div>

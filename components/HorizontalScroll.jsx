@@ -4,14 +4,15 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useTranslation } from '@/components/LanguageProvider'
 import Image from 'next/image'
-import dummy from '@/public/dummy.jpg'
-import { LuSquareArrowOutUpRight } from "react-icons/lu";
-import Link from 'next/link'
+import app1 from '@/public/app1.jpg'
+import app2 from '@/public/app2.jpg'
+import app3 from '@/public/app3.jpg'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function HorizontalScroll() {
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
   const containerRef = useRef(null)
   const panelsWrapperRef = useRef(null)
   const panelRefs = useRef([])
@@ -27,7 +28,7 @@ export default function HorizontalScroll() {
       thirdSentence: t('ourApproach.firstSection.thirdSentence'),
       subTitle4: t('ourApproach.firstSection.subTitle4'),
       fourthSentence: t('ourApproach.firstSection.fourthSentence'),
-      img: dummy 
+      img: app1 
     },
     { 
       title: t('ourApproach.secondSection.title'),
@@ -39,7 +40,7 @@ export default function HorizontalScroll() {
       thirdSentence: t('ourApproach.secondSection.thirdSentence'),
       subTitle4: t('ourApproach.secondSection.subTitle4'),
       fourthSentence: t('ourApproach.secondSection.fourthSentence'),
-      img: dummy 
+      img: app2 
     },
     { 
       title: t('ourApproach.thirdSection.title'),
@@ -51,7 +52,7 @@ export default function HorizontalScroll() {
       thirdSentence: t('ourApproach.thirdSection.thirdSentence'),
       subTitle4: t('ourApproach.thirdSection.subTitle4'),
       fourthSentence: t('ourApproach.thirdSection.fourthSentence'),
-      img: dummy 
+      img: app3 
     }
   ]
 
@@ -115,13 +116,13 @@ export default function HorizontalScroll() {
               priority={index === 0}
               className="object-cover absolute -z-10 will-change-transform"
             />
-            <div className="bg-black/40 backdrop-blur-sm p-8 rounded-lg max-w-5xl">
-              <h2 className="lg:text-6xl text-4xl text-center font-bold mb-4">{panel.title}</h2>
+            <div className="max-w-5xl lg:px-0 px-10">
+              <h2 className="lg:text-6xl md:text-4xl text-3xl text-center font-bold mb-4">{panel.title}</h2>
               <ul className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-start text-xl">
                 {panel.firstSentence && (
-                  <div>
-                    <h3 className='mb-8'>{panel.subTitle1}</h3>
-                    <li className="flex justify-between items-center lg:text-md text-sm">
+                  <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle1}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-sm'>
                       {panel.firstSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -130,9 +131,9 @@ export default function HorizontalScroll() {
                   </div>
                 )}
                 {panel.secondSentence && (
-                  <div>
-                    <h3 className='mb-8'>{panel.subTitle2}</h3>
-                    <li className="flex justify-between items-center lg:text-md text-sm">
+                  <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle2}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-sm'>
                       {panel.secondSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -141,9 +142,9 @@ export default function HorizontalScroll() {
                   </div>
                 )}
                 {panel.thirdSentence && (
-                  <div>
-                    <h3 className='mb-8'>{panel.subTitle3}</h3>
-                    <li className="flex justify-between items-center lg:text-md text-sm">
+                  <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle3}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-sm'>
                       {panel.thirdSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -152,9 +153,9 @@ export default function HorizontalScroll() {
                   </div>
                 )}
                 {panel.fourthSentence && (
-                  <div>
-                    <h3 className='mb-8'>{panel.subTitle4}</h3>
-                    <li className="flex justify-between items-center lg:text-md text-sm">
+                  <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle4}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-sm'>
                       {panel.fourthSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />

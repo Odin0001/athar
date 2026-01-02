@@ -8,8 +8,8 @@
     "contact": "Contact Us"
   },
   "home": {
-    "headerTitle": "Athar",
-    "headerSlogan": "Some slogan here",
+    "headerTitle": "At Athar We're Not Just Marketers",
+    "headerSlogan": "We're a team of creative minds driven by passion to craft innovative solutions that help our clients leave their own \"Athar\" a lasting impact that inspires & makes difference",
     "firstSection": {
       "firstSentence": "AT athar we’re not just marketers — we’re a team of creative minds driven by passion to craft innovative solutions that help our clients leave their own ‘Athr’... a lasting impact that inspires and makes a difference.",
       "secondSentence": "A specialized branding and digital growth agency in Abu Dhabi.",
@@ -17,6 +17,7 @@
       "fourthSentence": "We operate through a flexible, tailor-made business model designed to meet each client’s unique needs and drive lasting impact."
     },
     "secondSection": {
+      "servicesTitle": "Our Services",
       "firstList": {
         "title": "Direction",
         "firstSentence": "Market Research & Competitor Analysis",
@@ -54,6 +55,7 @@
       "secondSentence": "Each stage is carefully designed, connecting essential steps and integrated activities that ensure clarity, creativity, and measurable growth."
     },
     "fourthSection": {
+      "title": "Why Us",
       "sentence": "Because we break the mold. We’re a team that never settles for ordinary — we think beyond boundaries, strive for excellence, and turn bold ideas into measurable success stories that put your brand exactly where it belongs: at the top."
     }
   },
@@ -71,9 +73,12 @@
     },
     "thirdSection": {
       "title": "Values",
-      "firstSentence": "Artistry",
-      "secondSentence": "Partnership",
-      "thirdSentence": "impact"
+      "title2": "Creativity & Innovation",
+      "firstSentence": "At Athar, creativity is our core. We push beyond the expected, crafting fresh ideas and innovative marketing solutions to deliver unique and unforgettable impact",
+      "title3": "Partnership",
+      "secondSentence": "We believe success is born from meaningful collaboration, grounded in trust, transparency, and shared vision. For us, real impact is simple: it’s seeing our clients’ brands thrive",
+      "title4": "Impact",
+      "thirdSentence": "We aim to make a real and lasting difference. We see impact not only in short-term results but also in the long-term footprint that each project we undertake leaves behind"
     }
   },
   "services": {
@@ -82,38 +87,38 @@
     "firstSection": {
       "title": "Strategic Direction",
       "firstSentence": "We Lead Your Brand in the Right Direction. From market understanding and competitor analysis to smart strategy development — we create a roadmap that ensures lasting impact and measurable results.",
-      "secondSentence": "Growth has always been the ultimate goal for every business — and Athar is your partner on that journey.With the latest tools and data-driven insights, we empower your brand to connect more deeply and effectively with your audience.",
+      "secondSentence": "Growth has always been the ultimate goal for every business — and Athar is your partner on that journey. With the latest tools and data-driven insights, we empower your brand to connect more deeply and effectively with your audience",
       "list": {
         "item1": "Market Research & Competitor Analysis",
         "item2": "Brand Positioning & Messaging",
         "item3": "Marketing Strategy",
-        "item4": "Tailored Marketing Plans"
+        "item4": "Customized Marketing Plans"
       }
     },
     "secondSection": {
       "title": "Brand Essence",
-      "firstSentence": "We Create, Design, and Innovate Living Visual Identities that illuminate your brand and leave a lasting impression. With precision and artistry, we weave every detail to visually tell your story and bring your brand’s essence to life.",
+      "firstSentence": "We design, imagine, and innovate living visual identities that light up your brand and carve a memorable imprint. With precision and artistry, we weave your essence into visuals that tell your story beautifully",
       "list": {
         "item1": "Brand Strategy",
         "item2": "Logo & Complete Visual Identity Design",
         "item3": "Creative Design & Campaigns",
         "item4": "Digital Content Planning",
-        "item5": "Company Profile"
+        "item5": "Company Profile Design"
       }
     },
     "thirdSection": {
       "title": "Digital Momentum",
-      "firstSentence": "We Guarantee a Digital Presence that shakes platforms and sparks engagement — where every online touchpoint becomes an opportunity to ignite a storm of interaction.All powered by real-time dashboarSocial Media Management",
+      "firstSentence": "We guarantee a Digital Presence that shakes platforms and sparks engagement — where every online touchpoint becomes an opportunity to ignite a storm of interaction، backed by instant dashboards that track everything in real time",
       "list": {
-        "item1": "Paid Advertising (Google Ads, Meta Ads, TikTok, LinkedIn)",
-        "item2": "SEO & Content Marketing",
-        "item3": "Influencer Marketing & Partnerships",
-        "item4": "Analytics & Reporting"
+        "item1": "Social Media Management",
+        "item2": "Paid Advertising (Google Ads, Meta Ads, TikTok, LinkedIn)",
+        "item3": "Search Engine Optimization (SEO) & Content Marketing",
+        "item4": "Influencer Marketing &  Strategic Partnerships"
       }
     },
     "fourthSection": {
-      "title": "Crafted in Light",
-      "firstSentence": "Because Every Journey Has a Moment — and Every Moment Tells a Story We capture the experiences that define your brand, documenting and narrating its story — from powerful visual content to the lasting impact you aim to create.",
+      "title": "The Visual Experience",
+      "firstSentence": "Because Every Journey Has a Moment — and Every Moment Tells a Story, We capture the experiences that define your brand, documenting and narrating its story — from powerful visual content to the lasting impact you aim to create",
       "list": {
         "item1": "Brand & Corporate Videos",
         "item2": "Event Coverage",
@@ -127,15 +132,15 @@
     "headerTitle": "Our Approach",
     "headerSlogan": "Some slogan here",
     "firstSection": {
-      "title": "Phase One: Exploring the Journey & Crafting the Strategy",
+      "title": "Phase One: Journey Exploration & Strategy Development",
       "subTitle1": "Brand & Needs Assessment",
-      "firstSentence": "We start with a deep understanding of your business — exploring your activities, target audience, and goals.Our team gathers insights about your brand and current marketing efforts to identify opportunities for meaningful growth.",
+      "firstSentence": "starting with a deep understanding of the client’s business, target audience, and objectives Our team gathers insights about brand and current marketing efforts to identify opportunities  and priorities",
       "subTitle2": "Defining Objectives",
-      "secondSentence": "Together, we set clear, measurable, and time-bound goals that align with your vision and business priorities — ensuring every step has purpose and direction.",
+      "secondSentence": "work closely with the client to define the objectives and goals to be achieved. Each goal is set to be clear, measurable, and tied to a specific timeframe to ensure accountability and trackable progress",
       "subTitle3": "Developing the Marketing Plan",
-      "thirdSentence": "We craft a customized social media and marketing strategy designed to achieve your objectives. This includes selecting the right platforms, defining content pillars, building publishing schedules, and allocating budgets effectively.",
+      "thirdSentence": "Develop a customized plan specifying platforms, content pillars, publishing schedule, and budget to achieve objectives",
       "subTitle4": "Agreement & Expectations",
-      "fourthSentence": "We formalize our partnership through a transparent agreement that outlines timelines, budgets, and key performance indicators — ensuring alignment and trust from the very start."
+      "fourthSentence": "formalize the relationship with the client through clear agreements covering timelines, costs, and key performance indicators (KPIs) to ensure alignment and accountability"
     },
     "secondSection": {
       "title": "Phase Two: Execution",
@@ -169,13 +174,13 @@
       "secondTitle": "Embracing Change",
       "secondSentence": "We acknowledge the necessity of change. As the market evolves, we continuously refine and adapt strategies in collaboration with our clients to ensure relevance and growth.",
       "thirdTitle": "Realism",
-      "thirdSentence": "We reject unrealistic assumptions and expectations. ur strategies and KPIs are grounded in ccurate, up-to-date data to ensure easurable results.",
+      "thirdSentence": "We reject unrealistic assumptions and expectations. Our strategies and KPIs are grounded in accurate, up-to-date data to ensure measurable results.",
       "fourthTitle": "Specialization",
-      "fourthSentence": "We specialize in healthcare and hospitality arketing, with every team member ringing extensive experience in these ndustries to deliver expert solutions.",
+      "fourthSentence": "We specialize in healthcare and hospitality marketing, with every team member bringing extensive experience in these industries to deliver expert solutions.",
       "fifthTitle": "Arabic Content Excellence",
-      "fifthSentence": "From the very beginning, we have aimed to nrich the Arabic digital content landscape, roviding creative and culturally resonant ampaigns.",
+      "fifthSentence": "From the very beginning, we have aimed to enrich the Arabic digital content landscape, providing creative and culturally resonant campaigns.",
       "sixthTitle": "Customized Strategy",
-      "sixthSentence": "We don’t believe in copy-paste solutions. very marketing plan is tailored to meet our lients’ unique objectives, ensuring mpactful and sustainable results."
+      "sixthSentence": "We don’t believe in copy-paste solutions. Every marketing plan is tailored to meet our clients’ unique objectives, ensuring impactful and sustainable results."
     }
   }
 }

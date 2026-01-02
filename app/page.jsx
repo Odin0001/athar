@@ -12,6 +12,10 @@ import Typewriter from "@/components/TypeWriting";
 import Expertise from "@/components/Expertise";
 import MultiDimensionsSlider from "@/components/MultiDimensionsSlider";
 
+import Approach from "@/components/Approach";
+import WhyUs from "@/components/WhyUs";
+import Header2 from "@/components/Header2";
+
 
 export const metadata = {
   title: "Agency — Creative Digital Marketing Agency",
@@ -87,14 +91,16 @@ export default function Home() {
   
   return (
     <>
-      <Header />
+      <Header2 />
+      {/* <Header /> */}
       <Typewriter />
       {/* <StackedSection /> */}
       <Expertise />
       {/* <HorizontalScroll /> */}
       {/* <PinnedHeadings /> */}
-      <MultiDimensionsSlider />
-      
+      {/* <MultiDimensionsSlider /> */}
+      <Approach />
+      <WhyUs />
       {/* <ColorsPalette /> */}
       
       {/* <Carousel /> */}
