@@ -101,7 +101,9 @@ const Navbar = () => {
     <>
     <div className={`w-full fixed top-0 left-1/2 -translate-x-1/2 z-[100] ${scrolled ? 'bg-prussian-blue/40 backdrop-blur-sm shadow' : 'bg-transparent'} transition-colors duration-300 ease`}>
       <nav className={`w-3/4 mx-auto flex justify-between items-center p-5`}>
-          <Image src={logo} alt='logo' width={200} className="md:w-[200px] w-[120px]" />
+          <Link href="/">
+            <Image src={logo} alt='logo' width={200} className="md:w-[200px] w-[120px]" />
+          </Link>
         {/* Burger Menu (always on top) */}
         <button
           className="w-[40px] h-[30px] cursor-pointer"
