@@ -32,7 +32,7 @@ export const metadata = {
     "strategy",
     "conversion rate optimization",
   ],
-  authors: [{ name: "Athar", url: "https://athar.example.com" }],
+  authors: [{ name: "Athar", url: "https://athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -53,11 +53,11 @@ export const metadata = {
     title: "Services — Athar",
     description:
       "Services offered by Athar — Digital Marketing Agency. Strategy, SEO, PPC, content marketing, web design and performance-driven campaigns.",
-    url: "https://athar.example.com/services",
+    url: "https://athar.agency/services",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.example.com/og-image.png",
+        url: "https://athar.agency/og-image.png",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -71,7 +71,7 @@ export const metadata = {
     title: "Services — Athar",
     description:
       "Services offered by Athar — Digital Marketing Agency. Strategy, SEO, PPC, content marketing, web design and performance-driven campaigns.",
-    images: ["https://athar.example.com/og-image.png"],
+    images: ["https://athar.agency/og-image.png"],
     creator: "@athar",
   },
   icons: {

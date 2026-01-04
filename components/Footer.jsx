@@ -4,6 +4,7 @@ import logo from '@/public/logo.png';
 import { useTranslation } from '@/components/LanguageProvider'
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
+import { IoLocationOutline } from "react-icons/io5";
 
 const generateBubbleStyle = (size, distance, position, time, delay) => ({
   '--size': `${size}rem`,
@@ -171,13 +172,17 @@ const Footer = () => {
 
       {/* Footer Content: Uses Tailwind classes for layout and styling */}
       <div className="content bg-blue-600 pt-24 pb-8 z-20 w-full" style={{ background: footerBgColor, margin: 0 }}>
-        <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 grid-cols-1 justify-items-center gap-6 text-white md:grid-cols-2 md:px-6 sm:grid-cols-1 sm:gap-14">
+        <div dir={lang === 'ar' ? 'rtl' : 'ltr'} className="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 grid-cols-1 justify-items-center gap-6 text-white md:grid-cols-2 md:px-6 sm:grid-cols-1 sm:gap-14">
           
           {/* Label Section */}
           <div className="footer__label flex flex-col items-center sm:block">
             <Image src={logo} alt="Logo" width={200} className="mb-6" />
             <span className="text-sm sm:text-xs">
               {t('home.firstSection.secondSentence')}
+            </span>
+            <span className="text-sm sm:text-xs flex gap-2 items-center mt-4 -ml-1">
+              <IoLocationOutline size={20} />
+              {t('footer.location')}
             </span>
           </div>
 

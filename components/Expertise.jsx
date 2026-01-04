@@ -74,7 +74,18 @@ const Expertise = () => {
       image: '/crafted.png',
       bgImage: '/home-brand.png',
       bgColor: 'bg-dark-teal',
-    }
+    },
+    {
+      number: '',
+      title: '',
+      firstSentence: '',
+      secondSentence: '',
+      thirdSentence: '',
+      fourthSentence: '',
+      image: '',
+      bgImage: '',
+      bgColor: 'bg-dark-teal',
+    },
   ];
 
   const containerRef = useRef(null);
@@ -182,7 +193,7 @@ const Expertise = () => {
                 
                 {/* Title and Number */}
                 <header className={`flex items-center ${lang === 'ar' ? 'justify-end' : 'justify-start'} p-4 bg-transparent w-full h-[100px] flex-shrink-0 ${slide.bgColor === 'bg-ice-blue' ? 'text-prussian-blue' : slide.number === '02' ? 'text-dark-teal' : 'text-white'}`}>
-                  <h2 className={`text-4xl sm:text-6xl font-extrabold flex items-center ${lang === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
+                  <h2 className={`text-2xl sm:text-6xl font-extrabold flex items-center ${lang === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-4'}`}>
                     <span className="text-2xl sm:text-3xl font-light opacity-80">{slide.number}</span>
                     <div className='relative inline-block'>
                       {slide.bgImage && (
@@ -204,7 +215,7 @@ const Expertise = () => {
                 {/* Description and Image */}
                 <div className={`slide-content flex ${lang === 'ar' ? 'lg:flex-row-reverse flex-col lg:items-start items-end' : 'lg:flex-row flex-col'} flex-grow p-4 mt-4 overflow-hidden ${slide.number === '02' ? 'text-dark-teal' : 'text-white'}`}>
                   <ul 
-                    className={`description-text lg:w-1/2 w-full text-xl sm:text-3xl font-light leading-relaxed opacity-100 space-y-2 ${lang === 'ar' ? 'text-right pr-10' : 'text-left pl-10'}`} 
+                    className={`description-text lg:w-1/2 w-full text-sm sm:text-2xl font-light leading-relaxed opacity-100 sm:space-y-2 space-y-0 ${lang === 'ar' ? 'text-right pr-10' : 'text-left pl-10'}`} 
                     style={{ 
                       listStyleType: 'disc', 
                       listStylePosition: 'outside',
@@ -230,7 +241,7 @@ const Expertise = () => {
                       alt={`Image for slide ${slide.number}`}
                       width={600}
                       height={300}
-                      className="slide-image object-cover opacity-100"
+                      className="slide-image object-cover opacity-100 xl:w-[400px] lg:w-[300px] md:w-[250px] w-[200px]"
                     />}
                   </div>
                 </div>
@@ -241,7 +252,7 @@ const Expertise = () => {
       </div>
 
       {/* A final section after the pinned slides */}
-      <div className="relative z-0 h-[320vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
+      <div className="z-0 h-[320vh] w-full bg-gray-900 text-white flex items-center justify-center text-4xl sm:text-5xl font-bold">
         Effect Complete!
       </div>
     </div>

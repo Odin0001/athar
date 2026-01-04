@@ -18,10 +18,11 @@ import Header2 from "@/components/Header2";
 
 
 export const metadata = {
-  title: "Agency — Creative Digital Marketing Agency",
+  title: "Athar",
   description: "Agency is a full-service digital marketing and creative studio specializing in branding, web design, SEO, paid media and performance-driven campaigns.",
   keywords: [
     "digital marketing",
+    "digital marketing in UAE",
     "digital marketing agency",
     "marketing agency",
     "creative agency",
@@ -45,9 +46,9 @@ export const metadata = {
     "ecommerce marketing",
     "growth marketing"
   ],
-  authors: [{ name: "Agency" }],
+  authors: [{ name: "Athar" }],
   alternates: {
-    canonical: "https://example.com/" // replace with production URL
+    canonical: "https://athar.agency/" // replace with production URL
   },
   robots: {
     index: true,
@@ -62,23 +63,23 @@ export const metadata = {
     }
   },
   openGraph: {
-    title: "Agency — Creative Digital Marketing Agency",
+    title: "Athar",
     description: "Full-service digital marketing and creative studio — branding, web, SEO, paid media and performance marketing.",
-    url: "https://example.com/",
+    url: "https://athar.agency/",
     siteName: "Agency",
     images: [
       {
-        url: "https://example.com/og-image.jpg",
+        url: "https://athar.agency/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Agency — Creative Digital Marketing Agency"
+        alt: "Athar"
       }
     ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agency — Creative Digital Marketing Agency",
+    title: "Athar",
     description: "Full-service digital marketing and creative studio — branding, web, SEO, paid media and performance marketing.",
     creator: "@your_twitter" // replace with real handle
   },

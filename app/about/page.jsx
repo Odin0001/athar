@@ -13,7 +13,7 @@ export const metadata = {
     "SEO",
     "web design",
   ],
-  authors: [{ name: "Athar", url: "https://athar.example.com" }],
+  authors: [{ name: "Athar", url: "https://athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -33,11 +33,11 @@ export const metadata = {
   openGraph: {
     title: "About — Athar",
     description: "About Athar — Digital Marketing Agency",
-    url: "https://athar.example.com/about",
+    url: "https://athar.agency/about",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.example.com/og-image.png",
+        url: "https://athar.agency/og-image.png",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -50,7 +50,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "About — Athar",
     description: "About Athar — Digital Marketing Agency",
-    images: ["https://athar.example.com/og-image.png"],
+    images: ["https://athar.agency/og-image.png"],
     creator: "@athar",
   },
   icons: {

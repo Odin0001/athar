@@ -106,23 +106,23 @@ export default function HorizontalScroll() {
           <section
             key={index}
             ref={(el) => (panelRefs.current[index] = el)}
-            className="horizontal-panel flex-shrink-0 w-screen h-screen flex justify-center items-center text-white text-5xl relative"
+            className="horizontal-panel flex-shrink-0 w-screen h-screen flex lg:justify-center lg:items-center justify-center items-start text-white text-5xl relative"
           >
             <Image
               src={panel.img}
               alt={panel.title}
               fill
-              sizes="100vw"
+              sizes="(max-width: 640px) 100vw, 100vw"
               priority={index === 0}
-              className="object-cover absolute -z-10 will-change-transform"
+              className="object-cover absolute -z-10"
             />
-            <div className="max-w-5xl lg:px-0 px-10">
-              <h2 className="lg:text-6xl md:text-4xl text-3xl text-center font-bold mb-4">{panel.title}</h2>
-              <ul className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-start text-xl">
+            <div className="max-w-5xl lg:px-0 px-10 lg:mt-0 mt-20">
+              <h2 className="lg:text-6xl md:text-4xl text-lg lg:text-center font-bold lg:mb-4 mb-0" dir={lang === 'ar' ? 'rtl' : 'ltr'}>{panel.title}</h2>
+              <ul className="grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-2 items-start">
                 {panel.firstSentence && (
                   <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle1}</h3>
-                    <li className='flex justify-between items-center lg:text-md text-sm'>
+                    <h3 className='lg:mb-8 mb-3 text-neon-chartreuse font-semibold lg:text-xl text-sm'>{panel.subTitle1}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-xs'>
                       {panel.firstSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -132,8 +132,8 @@ export default function HorizontalScroll() {
                 )}
                 {panel.secondSentence && (
                   <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle2}</h3>
-                    <li className='flex justify-between items-center lg:text-md text-sm'>
+                    <h3 className='lg:mb-8 mb-3 text-neon-chartreuse font-semibold lg:text-xl text-sm'>{panel.subTitle2}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-xs'>
                       {panel.secondSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -143,8 +143,8 @@ export default function HorizontalScroll() {
                 )}
                 {panel.thirdSentence && (
                   <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle3}</h3>
-                    <li className='flex justify-between items-center lg:text-md text-sm'>
+                    <h3 className='lg:mb-8 mb-3 text-neon-chartreuse font-semibold lg:text-xl text-sm'>{panel.subTitle3}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-xs'>
                       {panel.thirdSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />
@@ -154,8 +154,8 @@ export default function HorizontalScroll() {
                 )}
                 {panel.fourthSentence && (
                   <div dir={lang === 'ar' ? 'rtl' : 'ltr'}>
-                    <h3 className='mb-8 text-neon-chartreuse font-semibold'>{panel.subTitle4}</h3>
-                    <li className='flex justify-between items-center lg:text-md text-sm'>
+                    <h3 className='lg:mb-8 mb-3 text-neon-chartreuse font-semibold lg:text-xl text-sm'>{panel.subTitle4}</h3>
+                    <li className='flex justify-between items-center lg:text-md text-xs'>
                       {panel.fourthSentence}
                       {/* <Link href='/services'>
                         <LuSquareArrowOutUpRight size={20} />

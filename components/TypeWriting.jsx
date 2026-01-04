@@ -2,6 +2,10 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from '@/components/LanguageProvider'
 import movingText from '@/public/moving-text.jpg'
+import red from '@/public/red1.png'
+import green from '@/public/green1.png'
+import yellow from '@/public/yellow1.png'
+import blue from '@/public/blue1.png'
 import Image from 'next/image';
 
 /**
@@ -72,7 +76,11 @@ const Typewriter = ({
   return (
     <div className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl w-full min-h-screen h-screen flex justify-center items-center font-extrabold text-center py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 lg:px-12 italic ${className}`}>
       <div className='w-full h-full relative'>
-        <Image src={movingText} alt='moving text' fill className='absolute -z-10 object-cover' />
+        <Image src={movingText} alt='moving text' fill className='absolute -z-10 object-cover lg:block hidden' />
+        <Image src={red} alt='red circle' width={85} className='absolute top-20 left-10 -z-10 lg:hidden block' />
+        <Image src={green} alt='green circle' width={70} className='absolute top-32 right-20 -z-10 lg:hidden block' />
+        <Image src={yellow} alt='yellow circle' width={50} className='absolute bottom-32 left-52 -z-10 lg:hidden block' />
+        <Image src={blue} alt='blue square' width={150} className='absolute top-1/2 right-1/2 -translate-y-1/2 -z-10 lg:hidden block' />
         <span className='text-gray-700 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[90%] sm:w-4/5 md:w-3/4 px-2 sm:px-4'>{currentText}</span>
         {/* Blinking Cursor */}
         

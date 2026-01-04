@@ -7,12 +7,16 @@
     "why": "why Athar",
     "contact": "Contact Us"
   },
+  "footer": {
+    "location": "UAE, Abu Dhabi"
+  },
   "home": {
     "headerTitle": "At Athar We're Not Just Marketers",
     "headerSlogan": "We're a team of creative minds driven by passion to craft innovative solutions that help our clients leave their own \"Athar\" a lasting impact that inspires & makes difference",
+    "headerButton": "Watch Our Work",
     "firstSection": {
       "firstSentence": "AT athar we’re not just marketers — we’re a team of creative minds driven by passion to craft innovative solutions that help our clients leave their own ‘Athr’... a lasting impact that inspires and makes a difference.",
-      "secondSentence": "A specialized branding and digital growth agency in Abu Dhabi.",
+      "secondSentence": "A specialized branding and digital growth agency in UAE",
       "thirdSentence": "Dedicated to crafting marketing solutions rooted in strategic insight and creative excellence.",
       "fourthSentence": "We operate through a flexible, tailor-made business model designed to meet each client’s unique needs and drive lasting impact."
     },
@@ -51,12 +55,15 @@
     },
     "thirdSection": {
       "title": "Our Approach",
-      "firstSentence": "Our collaboration journey follows a structured and thoughtful process — from the very first interaction to building a long-term partnership.",
-      "secondSentence": "Each stage is carefully designed, connecting essential steps and integrated activities that ensure clarity, creativity, and measurable growth."
+      "firstSentence": "Our collaboration journey follows a structured and thoughtful process from the very first interaction to building a long-term partnership.",
+      "secondSentence": "Each stage is carefully designed, connecting essential steps and integrated activities that ensure clarity, creativity, and measurable growth.",
+      "button": "Discover Our Approach"
     },
     "fourthSection": {
       "title": "Why Us",
-      "sentence": "Because we break the mold. We’re a team that never settles for ordinary — we think beyond boundaries, strive for excellence, and turn bold ideas into measurable success stories that put your brand exactly where it belongs: at the top."
+      "sentence": "Because we break the mold. We’re a team that never settles for ordinary we think beyond boundaries, strive for excellence, and turn bold ideas into measurable success stories that put your brand exactly where it belongs at the",
+      "top": "top",
+      "button": "Learn More"
     }
   },
   "about": {
@@ -64,12 +71,12 @@
     "headerSlogan": "Some slogan here",
     "firstSection": {
       "title": "Our Mission",
-      "firstSentence": "To ignite audience passion and curiosity toward our clients’ brands through innovative marketing solutions that transform ideas into impactful experiences — experiences that elevate and strengthen every brand’s digital presence.",
+      "firstSentence": "To ignite audience passion and curiosity toward our clients’ brands through innovative marketing solutions that transform ideas into impactful experiences experiences that elevate and strengthen every brand’s digital presence.",
       "secondSentence": "Rooted in our Arab heritage, we bridge businesses, people, and markets with creativity and purpose. At Athar, we take pride in enriching the Arabic creative landscape through every campaign, story, and strategy we deliver."
     },
     "secondSection": {
       "title": "Our Vision",
-      "firstSentence": "To spark creativity that creates waves of impact — transforming ideas into inspiring stories and building bridges between brands and people. We aspire to make every project a lasting mark — an Athar that endures through time."
+      "firstSentence": "To spark creativity that creates waves of impact transforming ideas into inspiring stories and building bridges between brands and people. We aspire to make every project a lasting mark an Athar that endures through time."
     },
     "thirdSection": {
       "title": "Values",
@@ -86,8 +93,8 @@
     "headerSlogan": "Some slogan here",
     "firstSection": {
       "title": "Strategic Direction",
-      "firstSentence": "We Lead Your Brand in the Right Direction. From market understanding and competitor analysis to smart strategy development — we create a roadmap that ensures lasting impact and measurable results.",
-      "secondSentence": "Growth has always been the ultimate goal for every business — and Athar is your partner on that journey. With the latest tools and data-driven insights, we empower your brand to connect more deeply and effectively with your audience",
+      "firstSentence": "We Lead Your Brand in the Right Direction. From market understanding and competitor analysis to smart strategy development we create a roadmap that ensures lasting impact and measurable results.",
+      "secondSentence": "Growth has always been the ultimate goal for every business and Athar is your partner on that journey. With the latest tools and data-driven insights, we empower your brand to connect more deeply and effectively with your audience",
       "list": {
         "item1": "Market Research & Competitor Analysis",
         "item2": "Brand Positioning & Messaging",
@@ -108,7 +115,7 @@
     },
     "thirdSection": {
       "title": "Digital Momentum",
-      "firstSentence": "We guarantee a Digital Presence that shakes platforms and sparks engagement — where every online touchpoint becomes an opportunity to ignite a storm of interaction، backed by instant dashboards that track everything in real time",
+      "firstSentence": "We guarantee a Digital Presence that shakes platforms and sparks engagement where every online touchpoint becomes an opportunity to ignite a storm of interaction، backed by instant dashboards that track everything in real time",
       "list": {
         "item1": "Social Media Management",
         "item2": "Paid Advertising (Google Ads, Meta Ads, TikTok, LinkedIn)",
@@ -118,7 +125,7 @@
     },
     "fourthSection": {
       "title": "The Visual Experience",
-      "firstSentence": "Because Every Journey Has a Moment — and Every Moment Tells a Story, We capture the experiences that define your brand, documenting and narrating its story — from powerful visual content to the lasting impact you aim to create",
+      "firstSentence": "Because Every Journey Has a Moment and Every Moment Tells a Story, We capture the experiences that define your brand, documenting and narrating its story from powerful visual content to the lasting impact you aim to create",
       "list": {
         "item1": "Brand & Corporate Videos",
         "item2": "Event Coverage",
@@ -145,11 +152,11 @@
     "secondSection": {
       "title": "Phase Two: Execution",
       "subTitle1": "Content Creation",
-      "firstSentence": "We bring the strategy to life — developing and scheduling creative, engaging content ased on the approved plan and brand bjectives.",
+      "firstSentence": "We bring the strategy to life developing and scheduling creative, engaging content ased on the approved plan and brand bjectives.",
       "subTitle2": "Content Management",
       "secondSentence": "We implement the plan across selected social media platforms, combining organic efforts with paid campaigns. Our team manages audience interactions, monitors engagement, and nurtures your brand’s online community.",
       "subTitle3": "Communication & Feedback",
-      "thirdSentence": "We maintain continuous communication with our clients through regular meetings and performance reports. Feedback is encouraged and integrated — ensuring the content’s quality, tone, and effectiveness reflect your brand’s goals. Being ready to make adjustments based on performance results.",
+      "thirdSentence": "We maintain continuous communication with our clients through regular meetings and performance reports. Feedback is encouraged and integrated ensuring the content’s quality, tone, and effectiveness reflect your brand’s goals. Being ready to make adjustments based on performance results.",
       "subTitle4": "Trend Monitoring",
       "fourthSentence": "We stay ahead of the curve by keeping track of the latest social media trends and algorithm updates. Through ongoing research, we refine and adapt the strategy to ensure long-term relevance and maximum impact."
     },
@@ -170,7 +177,7 @@
     "headerSlogan": "Some slogan here",
     "firstSection": {
       "firstTitle": "Partnership",
-      "firstSentence": "We believe in true partnership — considering our clients’ business as part of our own. This commitment drives us to take full responsibility for the success of their brand.",
+      "firstSentence": "We believe in true partnership considering our clients’ business as part of our own. This commitment drives us to take full responsibility for the success of their brand.",
       "secondTitle": "Embracing Change",
       "secondSentence": "We acknowledge the necessity of change. As the market evolves, we continuously refine and adapt strategies in collaboration with our clients to ensure relevance and growth.",
       "thirdTitle": "Realism",
@@ -181,6 +188,23 @@
       "fifthSentence": "From the very beginning, we have aimed to enrich the Arabic digital content landscape, providing creative and culturally resonant campaigns.",
       "sixthTitle": "Customized Strategy",
       "sixthSentence": "We don’t believe in copy-paste solutions. Every marketing plan is tailored to meet our clients’ unique objectives, ensuring impactful and sustainable results."
+    }
+  },
+  "contact": {
+    "headerTitle": "Reach us out",
+    "firstSection": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "companyName": "Company Name",
+      "position": "Position",
+      "subject": "Subject",
+      "message": "Your Message",
+      "sendMessage": "Send Message"
+    },
+    "secondSection": {
+      "title": "Athar",
+      "sentence": "Reach us to create your own impact"
     }
   }
 }

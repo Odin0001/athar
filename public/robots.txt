@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.athar.agency
+
+# Sitemaps
+Sitemap: https://www.athar.agency/sitemap.xml

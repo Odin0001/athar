@@ -16,7 +16,7 @@ export const metadata = {
     "PPC",
     "web design",
   ],
-  authors: [{ name: "Athar", url: "https://athar.example.com" }],
+  authors: [{ name: "Athar", url: "https://athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -37,11 +37,11 @@ export const metadata = {
     title: "Contact — Athar",
     description:
       "Get in touch with Athar — Digital Marketing Agency. Discuss your project, request a proposal, or ask about our services.",
-    url: "https://athar.example.com/contact",
+    url: "https://athar.agency/contact",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.example.com/og-image.png",
+        url: "https://athar.agency/og-image.png",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -55,7 +55,7 @@ export const metadata = {
     title: "Contact — Athar",
     description:
       "Get in touch with Athar — Digital Marketing Agency. Discuss your project, request a proposal, or ask about our services.",
-    images: ["https://athar.example.com/og-image.png"],
+    images: ["https://athar.agency/og-image.png"],
     creator: "@athar",
   },
   icons: {

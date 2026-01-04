@@ -267,16 +267,16 @@ const ScrollSections = () => {
                 <div className="bg-gradient-overlay"></div>
                 <div
                   ref={el => headingRefs.current[index] = el}
-                  className={`section-heading w-full h-full flex ${lang === 'ar' ? 'lg:flex-row-reverse text-right' : 'lg:flex-row'} flex-col lg:justify-between justify-center items-center gap-10 px-10 text-white z-20 font-semibold w-[90vw] leading-none`}
+                  className={`section-heading w-full h-full flex ${lang === 'ar' ? 'lg:flex-row-reverse text-right' : 'lg:flex-row'} flex-col lg:justify-between justify-start items-center gap-10 px-10 pt-20 text-white z-20 font-semibold w-[90vw] leading-none`}
                 >
                   {/* {data.text} */}
                     <div className='lg:max-w-1/2 leading-6'>
-                      <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-10'>{data.title}</h1>
-                      <p className='text-md sm:text-lg md:text-xl mb-6'>{data.firstSentence}</p>
-                      {data.secondSentence && <p className='text-md sm:text-lg md:text-xl mb-6'>{data.secondSentence}</p>}
-                      {data.thirdSentence && <p className='text-md sm:text-lg md:text-xl'>{data.thirdSentence}</p>}
+                      <h1 className='text-2xl sm:text-3xl md:text-5xl lg:text-6xl lg:mb-10 mb-4'>{data.title}</h1>
+                      <p className='text-xs sm:text-lg md:text-xl mb-6'>{data.firstSentence}</p>
+                      {data.secondSentence && <p className='text-xs sm:text-lg md:text-xl mb-6'>{data.secondSentence}</p>}
+                      {data.thirdSentence && <p className='text-xs sm:text-lg md:text-xl'>{data.thirdSentence}</p>}
                     </div>
-                    <Image src={data.img} alt={`slide number ${index + 1}`} width={700} sizes='700px' className='max-w-[700px] lg:w-[700px] w-[400px]' />
+                    <Image src={data.img} alt={`slide number ${index + 1}`} width={700} sizes='700px' className='max-w-[700px] lg:w-[500px] w-[150px]' />
                 </div>
               </div>
             </div>

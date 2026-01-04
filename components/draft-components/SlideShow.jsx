@@ -81,8 +81,8 @@ export default function SlideShow() {
           { '--width': 200, xPercent: 0 },
           0
         )
-        // Slide background image scale (from the main section)
-        .fromTo(slideBackgroundImages[index], { scale: 2 }, { scale: 1 }, 0);
+        // Slide background image scale (from the main section) — reduced initial scale to avoid upscaling on mobile
+        .fromTo(slideBackgroundImages[index], { scale: 1.08 }, { scale: 1 }, 0);
         
       // Sentence animations
       // Outgoing sentence fades out and moves slightly
@@ -143,7 +143,7 @@ export default function SlideShow() {
   const slideData = [
     {
       heading: t('whyUs.firstSection.firstTitle'),
-      img: '/why-1.jpg',
+      img: '/why-1.2.jpg',
       sentence: t('whyUs.firstSection.firstSentence'),
     },
     {
@@ -153,22 +153,22 @@ export default function SlideShow() {
     },
     {
       heading: t('whyUs.firstSection.thirdTitle'),
-      img: '/why-3.jpg',
+      img: '/why-6.jpg',
       sentence: t('whyUs.firstSection.thirdSentence'),
     },
     {
       heading: t('whyUs.firstSection.fourthTitle'),
-      img: '/why-4.jpg',
+      img: '/why-3.jpg',
       sentence: t('whyUs.firstSection.fourthSentence'),
     },
     {
       heading: t('whyUs.firstSection.fifthTitle'),
-      img: '/why-5.jpg',
+      img: '/why-4.jpg',
       sentence: t('whyUs.firstSection.fifthSentence'),
     },
     {
       heading: t('whyUs.firstSection.sixthTitle'),
-      img: '/why-1.jpg',
+      img: '/why-5.jpg',
       sentence: t('whyUs.firstSection.sixthSentence'),
     },
   ];
@@ -188,14 +188,27 @@ export default function SlideShow() {
               <div className="slide__content relative w-full h-full flex flex-col items-center justify-center">
                 {/* Background Image */}
                 <div className="absolute inset-0 w-full h-full z-0">
-                  <Image
-                    src={slide.img}
-                    alt={slide.heading}
-                    fill
-                    className="slide__bg-image object-cover"
-                    sizes="100vw"
-                    priority={i === 0}
-                  />
+                  {/* Serve 1x/2x variants via <picture> for all slides (pattern: why-N.jpg / why-N.2.jpg) */}
+                  <picture>
+                    <source
+                      media="(max-width: 640px)"
+                      srcSet={`${slide.img.includes('.2') ? slide.img.replace('.2','') : slide.img} 1x, ${slide.img.includes('.2') ? slide.img : slide.img.replace('.jpg', '.2.jpg')} 2x`}
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 641px)"
+                      srcSet={`${slide.img.includes('.2') ? slide.img : slide.img.replace('.jpg', '.2.jpg')} 1x, ${slide.img.includes('.2') ? slide.img : slide.img.replace('.jpg', '.2.jpg')} 2x`}
+                      type="image/jpeg"
+                    />
+                    <img
+                      src={slide.img.includes('.2') ? slide.img : slide.img.replace('.jpg', '.2.jpg')}
+                      alt={slide.heading}
+                      className={`slide__bg-image object-cover ${i + 1 === 1 ? 'object-right' : 'object-center'} w-full h-full`}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      fetchPriority={i === 0 ? 'high' : 'low'}
+                    />
+                  </picture>
                 </div>
                 
                 {/* Content Layer */}
