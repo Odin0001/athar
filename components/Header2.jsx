@@ -34,7 +34,7 @@ const Header2 = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] font-extrabold text-white mb-4 sm:mb-6 md:mb-8 lg:mb-10 leading-tight sm:leading-tight md:leading-tight lg:leading-[2">{t('home.headerTitle')}</h1>
         <p className="text-white text-base sm:text-lg md:text-xl mb-4 sm:mb-6">{t('home.headerSlogan')}</p>
         <button className="my-6 sm:my-8 md:my-10">
-          <a href="https://www.youtube.com/@AtharCreativeagency" target="_blank" className="rounded-full py-2 px-4 sm:px-6 border border-white text-white text-sm sm:text-base hover:bg-white hover:text-black transition-colors duration-300">{t('home.headerButton')}</a>
+          <a href="https://www.youtube.com/watch?v=f6L_Po1CpXc" target="_blank" className="rounded-full py-2 px-4 sm:px-6 border border-white text-white text-sm sm:text-base hover:bg-white hover:text-black transition-colors duration-300">{t('home.headerButton')}</a>
         </button>
         <p className="text-white text-base sm:text-lg md:text-xl">{t('home.firstSection.secondSentence')}</p>
       </div>

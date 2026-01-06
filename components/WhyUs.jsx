@@ -28,7 +28,7 @@ const WhyUs = () => {
           <span className='relative'>
             <Image src={blue} alt='blue underline' width={150} className='absolute bottom-0 left-1/2 -translate-x-1/2 -z-10' />
             {t('home.fourthSection.top')}
-          </span>.
+          </span>
         </p>
         <Link href='/why-athar' className="bg-strawberry-red rounded-full py-2 px-6 text-white">{t('home.fourthSection.button')}</Link>
       </div>
