@@ -69,7 +69,7 @@ export const metadata = {
     creator: "@athar",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
