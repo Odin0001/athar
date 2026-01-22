@@ -47,9 +47,6 @@ export const metadata = {
     "growth marketing"
   ],
   authors: [{ name: "Athar" }],
-  alternates: {
-    canonical: "https://athar.agency/" // replace with production URL
-  },
   robots: {
     index: true,
     follow: true,
@@ -84,7 +81,10 @@ export const metadata = {
     creator: "@your_twitter" // replace with real handle
   },
   verification: {
-    google: "your-google-site-verification-token" // replace with your token
+    google: 'nnH4fgW9zRnWSg0kYtR7LdFdH8lErPiIre5d9kDvZMQ'
+  },
+  alternates: {
+    canonical: 'https://www.athar.agency',
   }
 };
 

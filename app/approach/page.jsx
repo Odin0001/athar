@@ -60,6 +60,12 @@ export const metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+  verification: {
+    google: 'nnH4fgW9zRnWSg0kYtR7LdFdH8lErPiIre5d9kDvZMQ'
+  },
+  alternates: {
+    canonical: 'https://www.athar.agency',
+  }
 }
 
 const page = () => {

@@ -75,6 +75,9 @@ export const metadata = {
   },
   verification: {
     google: 'nnH4fgW9zRnWSg0kYtR7LdFdH8lErPiIre5d9kDvZMQ'
+  },
+  alternates: {
+    canonical: 'https://www.athar.agency',
   }
 };
 
