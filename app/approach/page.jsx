@@ -15,7 +15,7 @@ export const metadata = {
     "content",
     "web design",
   ],
-  authors: [{ name: "Athar", url: "https://athar.agency" }],
+  authors: [{ name: "Athar", url: "https://www.athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -35,11 +35,11 @@ export const metadata = {
   openGraph: {
     title: "Approach — Athar",
     description: "Our approach to delivering measurable digital marketing results — strategy, design, and performance.",
-    url: "https://athar.agency/approach",
+    url: "https://www.athar.agency/approach",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.agency/og-image.png",
+        url: "https://www.athar.agency/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -52,7 +52,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Approach — Athar",
     description: "Our approach to delivering measurable digital marketing results — strategy, design, and performance.",
-    images: ["https://athar.agency/og-image.png"],
+    images: ["https://www.athar.agency/og-image.jpg"],
     creator: "@athar",
   },
   icons: {
