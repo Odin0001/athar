@@ -19,16 +19,34 @@ const alexandria = Alexandria({
 
 export const metadata = {
   title: "Athar",
-  description: "Digital Marketing Agency",
+  description: "Agency is a full-service digital marketing and creative studio specializing in branding, web design, SEO, paid media and performance-driven campaigns.",
   keywords: [
     "digital marketing",
+    "digital marketing in UAE",
+    "digital marketing agency",
     "marketing agency",
-    "SEO",
-    "PPC",
-    "content marketing",
+    "creative agency",
+    "branding",
+    "brand strategy",
     "web design",
+    "website design",
+    "SEO",
+    "search engine optimization",
+    "PPC",
+    "paid media",
+    "social media marketing",
+    "content marketing",
+    "email marketing",
+    "conversion rate optimization",
+    "CRO",
+    "UX",
+    "UI",
+    "performance marketing",
+    "analytics",
+    "ecommerce marketing",
+    "growth marketing"
   ],
-  authors: [{ name: "Athar", url: "https://athar.example.com" }],
+  authors: [{ name: "Athar", url: "https://www.athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -47,12 +65,12 @@ export const metadata = {
   },
   openGraph: {
     title: "Athar",
-    description: "Digital Marketing Agency",
-    url: "https://athar.example.com",
+    description: "Full-service digital marketing and creative studio — branding, web, SEO, paid media and performance marketing.",
+    url: "https://www.athar.agency",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.example.com/og-image.png",
+        url: "https://www.athar.agency/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -64,8 +82,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Athar",
-    description: "Digital Marketing Agency",
-    images: ["https://athar.example.com/og-image.png"],
+    description: "Full-service digital marketing and creative studio — branding, web, SEO, paid media and performance marketing.",
+    images: ["https://www.athar.agency/og-image.jpg"],
     creator: "@athar",
   },
   icons: {
