@@ -62,7 +62,7 @@ export const metadata = {
   openGraph: {
     title: "Athar",
     description: "Full-service digital marketing and creative studio — branding, web, SEO, paid media and performance marketing.",
-    url: "https://athar.agency/",
+    url: "https://www.athar.agency",
     siteName: "Agency",
     images: [
       {
