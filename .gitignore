@@ -20,6 +20,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 # npm/yarn/pnpm logs and files
 npm-debug.log*

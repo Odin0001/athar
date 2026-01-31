@@ -1,4 +1,5 @@
 import { Montserrat, Alexandria } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import LenisProvider from "@/utils/LenisProvider";
 import SplashCursor from "@/components/SplashCursor";
@@ -105,6 +106,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.className} ${alexandria.className} antialiased`}
       >
+        <Analytics />
         <SplashCursor />
         <LenisProvider>
           <LanguageProvider>
