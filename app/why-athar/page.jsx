@@ -16,7 +16,7 @@ export const metadata = {
     "web design",
     "performance marketing",
   ],
-  authors: [{ name: "Athar", url: "https://athar.agency" }],
+  authors: [{ name: "Athar", url: "https://www.athar.agency" }],
   robots: {
     index: true,
     follow: true,
@@ -37,11 +37,11 @@ export const metadata = {
     title: "Why Athar — Athar",
     description:
       "Why choose Athar — Digital Marketing Agency. Results-driven strategy, creative design, and measurable performance for growing brands.",
-    url: "https://athar.agency/why-athar",
+    url: "https://www.athar.agency/why-athar",
     siteName: "Athar",
     images: [
       {
-        url: "https://athar.agency/og-image.png",
+        url: "https://www.athar.agency/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Athar — Digital Marketing Agency",
@@ -55,7 +55,7 @@ export const metadata = {
     title: "Why Athar — Athar",
     description:
       "Why choose Athar — Digital Marketing Agency. Results-driven strategy, creative design, and measurable performance for growing brands.",
-    images: ["https://athar.agency/og-image.png"],
+    images: ["https://www.athar.agency/og-image.jpg"],
     creator: "@athar",
   },
   icons: {
