@@ -86,7 +86,6 @@ export const metadata = {
     canonical: 'https://www.athar.agency',
   }
 }
-
 const page = () => {
   return (
     <div>
