@@ -5,6 +5,7 @@ import { useTranslation } from '@/components/LanguageProvider'
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const generateBubbleStyle = (size, distance, position, time, delay) => ({
   '--size': `${size}rem`,
@@ -183,6 +184,10 @@ const Footer = () => {
             <span className="text-sm sm:text-xs flex gap-2 items-center mt-4 -ml-1">
               <IoLocationOutline size={20} />
               {t('footer.location')}
+            </span>
+            <span className="text-sm sm:text-xs flex gap-2 items-center mt-4 -ml-1">
+              <FaPhoneAlt size={16} />
+              +971 050 610 8546
             </span>
           </div>
 
