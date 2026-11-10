@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import LenisProvider from "@/utils/LenisProvider";
 import SplashCursor from "@/components/SplashCursor";
-import Navbar from "@/components/Navbar";
+import ConditionalNavbar from "@/components/ConditionalNavbar";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import ConditionalFooter from "@/components/ConditionalFooter";
 import FontController from "@/components/FontController";
@@ -114,7 +114,7 @@ export default function RootLayout({ children }) {
               montserratClassName={montserrat.className}
               alexandriaClassName={alexandria.className}
             />
-            <Navbar />
+            <ConditionalNavbar />
             {children}
             <ConditionalFooter />
           </LanguageProvider>

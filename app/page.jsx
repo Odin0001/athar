@@ -15,6 +15,10 @@ import MultiDimensionsSlider from "@/components/MultiDimensionsSlider";
 import Approach from "@/components/Approach";
 import WhyUs from "@/components/WhyUs";
 import Header2 from "@/components/Header2";
+import ClientLogos from "@/components/ClientLogos";
+import { createPublicClient } from "@/lib/supabase/server";
+
+export const revalidate = 300;
 
 
 export const metadata = {
@@ -88,11 +92,18 @@ export const metadata = {
   }
 };
 
-export default function Home() {
-  
+export default async function Home() {
+  const supabase = createPublicClient();
+  const { data: logos } = await supabase
+    .from("logos")
+    .select("id, image_url")
+    .order("sort_order", { ascending: true })
+    .order("created_at", { ascending: true });
+
   return (
     <>
       <Header2 />
+      <ClientLogos logos={logos ?? []} />
       {/* <Header /> */}
       <Typewriter />
       {/* <StackedSection /> */}

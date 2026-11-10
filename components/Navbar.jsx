@@ -37,6 +37,10 @@ const Navbar = () => {
       link: '/why-athar'
     },
     {
+      text: t('nav.caseStudies'),
+      link: '/case-studies'
+    },
+    {
       text: t('nav.contact'),
       link: '/contact'
     }
